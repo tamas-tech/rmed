@@ -1,0 +1,3834 @@
+@font-face {
+    font-family: segoe ui light;
+    src: url(../fonts/segoe_ui_light.eot);
+    src: url(../fonts/segoe_ui_light.eot?#iefix) format('embedded-opentype'), url('../fonts/segoe_ui_light.svg#Segoe UI Light') format('svg'), url(../fonts/segoe_ui_light.woff) format('woff'), url(../fonts/segoe_ui_light.ttf) format('truetype');
+    font-weight: 400;
+    font-style: normal
+}
+
+@font-face {
+    font-family: amsipronarw-ultra;
+    src: url(../labfont/AmsiProNarw-Ultra.otf) format('opentype');
+    font-weight: 400;
+    font-style: normal
+}
+
+@font-face {
+    font-family: amsipronarw-light;
+    src: url(../labfont/AmsiProNarw-Light.otf) format('opentype');
+    font-weight: 400;
+    font-style: normal
+}
+
+@font-face {
+    font-family: amsipronarw-thin;
+    src: url(../labfont/AmsiProNarw-Thin.otf) format('opentype');
+    font-weight: 400;
+    font-style: normal
+}
+
+@font-face {
+    font-family: helveticaneue;
+    src: url(../labfont/HelveticaNeue_windows.ttf) format('truetype');
+    font-weight: 400;
+    font-style: normal
+}
+
+@font-face {
+    font-family: circularstd;
+    src: url(../fonts/FontCircular/CircularStd-Book_CE.otf) format('opentype');
+    font-weight: 400;
+    font-style: normal
+}
+
+@font-face {
+    font-family: circularstd;
+    src: url(../fonts/FontCircular/CircularStd-Bold_CE.otf) format('opentype');
+    font-weight: 700;
+    font-style: normal
+}
+
+@font-face {
+    font-family: circularstd;
+    src: url(../fonts/FontCircular/CircularStd-Black_CE.otf) format('opentype');
+    font-weight: 900;
+    font-style: normal
+}
+
+@media print {
+    .d-print-none {
+        display: none!important
+    }
+    a[href]:after {
+        content: none!important
+    }
+    #vezerloPageKozep {
+        width: 100%!important
+    }
+}
+
+html,
+body {
+    height: 100%
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Segoe UI, Arial, Sans-Serif;
+    font-size: 11pt;
+    overflow-x: hidden;
+    background-color: #fff
+}
+
+#redmenta {
+    min-height: 100%;
+    position: relative;
+    padding-bottom: 120px
+}
+
+#content {
+    padding: 20px;
+    min-height: 200px
+}
+
+#nonprofit_page #content {
+    padding: 0
+}
+
+#rackforest_footer {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    z-index: 420420;
+    height: 65px;
+    background: #2c2c2c;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center
+}
+
+#rackforest_footer_inner {
+    font-size: 20px;
+    font-weight: 700;
+    text-align: center
+}
+
+#rackforest_footer_inner img {
+    height: 65px
+}
+
+#rackforest_footer_inner #rpadding1 {
+    padding: 20px 20px 0;
+    display: inline-block
+}
+
+#rackforest_footer_inner #rpadding2 {
+    padding: 0 20px 20px;
+    display: inline-block
+}
+
+@media only screen and (max-width:810px) {
+    #rackforest_footer_inner img {
+        height: 35px
+    }
+}
+
+@media only screen and (max-width:720px) {
+    #rackforest_footer_inner {
+        font-size: 18px
+    }
+    #rackforest_footer_inner #rpadding1 {
+        padding: 10px 10px 0
+    }
+    #rackforest_footer_inner #rpadding2 {
+        padding: 0 10px 10px
+    }
+}
+
+@media only screen and (max-width:650px) {
+    #rackforest_footer_inner {
+        font-size: 14px
+    }
+}
+
+@media only screen and (max-width:340px) {
+    #rackforest_footer_inner {
+        font-size: 12px
+    }
+}
+
+@media only screen and (max-width:300px) {
+    #rackforest_footer_inner img {
+        height: 25px
+    }
+}
+
+#footer {
+    position: absolute;
+    bottom: 65px;
+    right: 0;
+    width: 100%;
+    padding: 14px;
+    font-size: 9pt;
+    text-align: center;
+    border-top: 1px solid #eaeaea;
+    border-bottom: 8px solid #bf0c2c;
+    background: #fff
+}
+
+#footer span {
+    display: inline-block
+}
+
+#footer span.dot {
+    padding: 0 4px
+}
+
+#footer span.dot:after {
+    content: '\00B7';
+    color: #bf0c2c
+}
+
+#footer a {
+    color: #000
+}
+
+.red_embeded #redmenta {
+    border: 1px solid #eaeaea
+}
+
+.red_embeded #content {
+    min-height: 10px
+}
+
+.red_embeded .not_as_embeded {
+    display: none!important
+}
+
+* {
+    outline: 0
+}
+
+a {
+    text-decoration: none
+}
+
+.panel-header a:link,
+.panel-header a:visited {
+    color: #fff
+}
+
+.panel-header a:hover,
+.panel-header a:active {
+    color: #ccc
+}
+
+textarea,
+input[type=text],
+input[type=password],
+input[type=number],
+input[type=date] {
+    padding: 5px;
+    border: 1px #d9d9d9 solid;
+    font-family: Segoe UI, Arial, Sans-Serif;
+    width: 200px;
+    -webkit-appearance: none
+}
+
+select {
+    padding: 5px;
+    font-family: Segoe UI, Arial, Sans-Serif;
+    width: 200px
+}
+
+textarea:focus,
+input[type=text]:focus,
+input[type=password]:focus,
+input[type=number]:focus,
+input[type=date]:focus,
+select:focus {
+    border: 1px solid #919191
+}
+
+input[type=number] {
+    width: 60px
+}
+
+textarea {
+    resize: vertical
+}
+
+.center {
+    display: block!important;
+    margin: 0 auto
+}
+
+.clear {
+    clear: both
+}
+
+.metro .navigation-bar .navigation-bar-content .element,
+.metro .navbar .navigation-bar-content .element,
+.metro .navigation-bar .navbar-content .element,
+.metro .navbar .navbar-content .element {
+    padding: 15px 15px 15px 14px
+}
+
+.element a.specmenu {
+    padding: 10px;
+    display: inline-block;
+    width: 100%
+}
+
+.element a.specmenu span {
+    font-size: 30px!important
+}
+
+.nopadding {
+    padding: 0!important
+}
+
+#fej {
+    padding-left: 10px;
+    background-color: #191919;
+    color: #790000
+}
+
+#fej a {
+    color: #c60000;
+    text-decoration: none
+}
+
+#fej h1 {
+    margin-bottom: 4px;
+    margin-top: 16px;
+    font-size: 32pt;
+    float: left;
+    padding-right: 12px;
+    color: #a00;
+    text-shadow: 1px 1px 2px #444
+}
+
+#fej #menu {
+    padding-top: 46px;
+    font-size: 12pt
+}
+
+#fej #menu a {
+    margin: 0 12px
+}
+
+#fej #menu a:hover {
+    text-decoration: underline
+}
+
+#content .item {
+    padding: 8px 14px;
+    clear: both;
+    display: block;
+    width: 420px;
+    margin: 10px;
+    color: #000
+}
+
+#content .item .graf .grafinner {
+    margin-top: -12px;
+    display: inline-block
+}
+
+#content .item .graf {
+    width: 50px;
+    height: 50px;
+    background: #a00;
+    font-size: 36pt;
+    text-align: center;
+    color: #fff;
+    font-weight: 700;
+    float: left
+}
+
+#content .item .text {
+    padding: 14px 0 14px 62px;
+    font-size: 12pt;
+    background: #fff;
+    color: #bbb
+}
+
+#content .item .text:hover {
+    color: #000
+}
+
+.feladatlapok a {
+    color: #000
+}
+
+.feladatlapok .bal {
+    width: 70px;
+    float: left;
+    text-align: center
+}
+
+.feladatlapok .avatar {
+    width: 70px
+}
+
+.feladatlapok .jobb {
+    width: 320px;
+    float: left;
+    margin-top: -10px;
+    border-bottom: 1px solid #e5e5e5;
+    background: #fff
+}
+
+.feladatlapok .fo {
+    padding: 11px 20px;
+    min-height: 38px
+}
+
+.feladatlapok .cim {
+    font-weight: 700;
+    font-size: 13pt
+}
+
+.feladatlapok .cim small {
+    color: #bbb;
+    font-size: 8pt;
+    font-weight: 400;
+    padding-left: 8px
+}
+
+.feladatlapok .leiras {
+    color: #bbb;
+    font-size: 10pt
+}
+
+.feladatlapok .fekete {
+    color: #000
+}
+
+.feladatlapok .adatok {
+    border-top: 1px solid #eee;
+    padding: 6px 20px;
+    text-align: center
+}
+
+#ks h2 {
+    margin: 6px;
+    text-align: center
+}
+
+#ks #ujKerdesAFelhobe h2 {
+    text-align: left;
+    margin: 25px 0 6px
+}
+
+#ks #bal h3 {
+    margin: 14px 6px 4px;
+    text-align: center
+}
+
+#ks h4 {
+    margin: 4px 0
+}
+
+#ks #kozep textarea {
+    width: 97%;
+    height: 60px
+}
+
+#ks #jobb input {
+    margin: 6px auto;
+    width: 98%;
+    display: block;
+    font-size: 13pt
+}
+
+#ks #bal,
+#ks #kozep,
+#ks #jobb {
+    margin-bottom: 10px
+}
+
+#ks #bal {
+    width: 25%;
+    float: left;
+    margin-right: 10px;
+    min-width: 200px
+}
+
+#ks #kozep {
+    width: calc(50% - 20px);
+    float: left;
+    min-width: 200px;
+    margin-right: 10px
+}
+
+.kssajat #bal {
+    width: 30%!important
+}
+
+.kssajat #kozep {
+    width: 65%!important
+}
+
+#ks #jobb {
+    width: 25%;
+    float: left;
+    min-width: 200px
+}
+
+#ks #jobb #ajanlott_kerdesek {
+    width: 98%;
+    margin: 0 auto
+}
+
+#ks #bal #valogatott_kerdesek {
+    margin: 0 auto;
+    overflow: auto
+}
+
+#ks #bal .sKerdesA {
+    color: #000
+}
+
+#loadmore {
+    cursor: pointer
+}
+
+.sKerdes {
+    border: 1px solid #999;
+    padding: 5px;
+    margin-bottom: 4px;
+    background-color: #ccc;
+    cursor: pointer;
+    margin-top: 0;
+    margin-left: 0
+}
+
+.sKerdes:hover {
+    background-color: #aaa
+}
+
+.sTitle {
+    font-weight: 700;
+    word-break: normal;
+    overflow: hidden;
+    cursor: pointer!important
+}
+
+.sTitle a {
+    color: #000
+}
+
+.sType {
+    padding: 2px 0;
+    visibility: hidden
+}
+
+.sType span {
+    background-color: #0c2a6f;
+    color: #fff;
+    padding: 2px 4px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    display: inline-block;
+    margin-top: 2px
+}
+
+.sCimkek {
+    padding: 2px 0;
+    position: relative;
+    top: -30px;
+    margin-bottom: -30px
+}
+
+.sCimkek span {
+    background-color: #006363;
+    color: #fff;
+    padding: 2px 4px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    margin-right: 2px;
+    display: inline-block;
+    margin-top: 2px
+}
+
+#kerdesBlokkBlokk,
+.kerdesBlokkBlokk {
+    border: 1px solid #eee;
+    margin: 10px 10px 5px;
+    padding: 0 15px
+}
+
+#ks #kerdesBlokkTitel,
+#ks #kerdesBlokkTitelPont {
+    font-size: 19px;
+    font-weight: 700;
+    margin: 15px 0;
+    font-weight: 500;
+    font-family: Segoe UI, Arial, Sans-Serif;
+    font-size: 22px;
+    text-align: left;
+    line-height: 22px
+}
+
+#kerdesBlokkTitel a {
+    color: #000
+}
+
+#kerdesBlokkTitel a:hover {
+    color: #919191
+}
+
+#kerdesBlokkTitel {
+    display: none
+}
+
+#ks #kerdesBlokkValaszok {
+    max-width: 550px;
+    width: 100%;
+    padding: 4px;
+    margin: 0 auto
+}
+
+#ks #kerdesBlokkPontok {
+    padding: 4px
+}
+
+.kssajat #kerdesBlokkValaszok {
+    max-width: 800px!important
+}
+
+#kerdesOpciok {
+    position: absolute;
+    top: 5px;
+    right: 5px
+}
+
+#ksEditKerdes {
+    color: #fff;
+    float: right;
+    margin-left: 5px
+}
+
+.lookastable {
+    display: table;
+    border-collapse: separate;
+    width: 100%
+}
+
+.lookastr {
+    display: table-row
+}
+
+.lookastd {
+    display: table-cell
+}
+
+.feleletvalasztos_valasz {
+    width: 50%;
+    text-align: center;
+    padding: 12px;
+    cursor: pointer;
+    background-color: #dcdcdc;
+    border: 3px solid #fff;
+    font-size: 15pt;
+    display: table-cell;
+    vertical-align: middle
+}
+
+.feleletvalasztos_valasz:hover,
+.igaz:hover,
+.hamis:hover {
+    background: #ccc
+}
+
+.igaz,
+.hamis {
+    background-color: #dcdcdc;
+    color: #000!important;
+    padding: 6px 12px;
+    font-size: 15pt
+}
+
+.activeValasz,
+.activeValasz:hover {
+    background-color: #4f92d0
+}
+
+.ks_allitas {
+    float: left;
+    margin: 0;
+    width: 60%;
+    margin-bottom: 25px!important;
+    font-size: 15pt!important
+}
+
+.ih_valasz {
+    float: right
+}
+
+.ih_valasz a {
+    margin-right: 5px;
+    text-decoration: none
+}
+
+.ksKerdesManage {
+    text-align: center;
+    margin-top: 6px;
+    margin-bottom: 12px
+}
+
+#ksKerdesManage {
+    display: none
+}
+
+.ksKerdesManage .addOrDel {
+    display: none;
+    margin: 0 3px 3px
+}
+
+#kerdesPontokSubmit {
+    width: 140px;
+    margin-bottom: 15px
+}
+
+#ksMetaEdit {
+    position: absolute;
+    background-color: #ccc;
+    padding: 15px 25px;
+    width: 500px;
+    left: 50%;
+    margin-left: -275px;
+    top: 150px
+}
+
+.ksOpt {
+    margin: 5px;
+    padding: 3px 5px;
+    background-color: #790000;
+    text-decoration: none;
+    color: #fff;
+    font-weight: 700;
+    display: block;
+    text-align: center;
+    min-width: 100px;
+    border: 0;
+    width: 98%
+}
+
+.ksOpt:hover {
+    cursor: pointer
+}
+
+#ujKerdesAFelhobe .ksOpt {
+    margin: 5px 3px
+}
+
+#ujKerdesAFelhobe input[type=text] {
+    min-width: 170px;
+    max-width: 100%!important
+}
+
+#ujKerdesAFelhobe label,
+#ujKerdesAFelhobe .valasz_opcio {
+    cursor: default
+}
+
+@media only screen and (min-width:1200px) {
+    #ujKerdesAFelhobe input[type=text] {
+        width: 220px
+    }
+    #ujKerdesAFelhobe .tf_text {
+        min-width: 300px!important
+    }
+}
+
+#ksKitoltBack {
+    background: #fff;
+    max-width: 700px;
+    width: 100%;
+    margin: 0 auto;
+    padding-top: 10px;
+    padding-bottom: 20px
+}
+
+#ksKitolt #cime i {
+    background: #bf0c2c;
+    color: #fff;
+    padding: 6px;
+    border-radius: 50%;
+    font-weight: 400;
+    font-size: 22px;
+    position: relative;
+    top: -4px
+}
+
+#ksKitolt {
+    color: #000
+}
+
+#ksKitolt #cime {
+    font-size: 26pt;
+    line-height: 100%;
+    border-bottom: 1px solid #eaeaea;
+    padding-bottom: 10px
+}
+
+#ksKitolt #cime a {
+    color: #000
+}
+
+#ksKitolt #cime a:hover {
+    color: #822
+}
+
+#ksKitolt #leiras {
+    margin: 10px auto 20px;
+    text-align: left;
+    font-weight: 500!important;
+    font-family: Segoe UI, Arial, Sans-Serif
+}
+
+#ksKitolt textarea {
+    width: 100%;
+    height: 200px
+}
+
+#ksKitolt h3,
+#ksKitolt h4 {
+    color: #000!important
+}
+
+#ksKitolt h3,
+#ksKitolt h5 {
+    font-weight: 700;
+    text-align: center
+}
+
+#ksKitolt h5 {
+    margin-top: 24px
+}
+
+.feladatCim {
+    margin-top: 30px!important;
+    padding-top: 10px!important;
+    font-weight: 500!important;
+    font-family: Segoe UI!important;
+    font-size: 22px!important;
+    text-align: left!important;
+    line-height: 22px!important
+}
+
+.feladatCim2 {
+    text-align: center!important
+}
+
+.pictureBlock {
+    float: left;
+    width: 20%;
+    min-width: 100px;
+    padding-right: 6px;
+    padding-top: 2px
+}
+
+.pictureBlock img {
+    vertical-align: top;
+    padding-right: 4px
+}
+
+.afterpictureBlock {
+    float: left;
+    width: 78%
+}
+
+.valaszBlokk {
+    padding: 6px;
+    width: 100%;
+    margin: 0 auto
+}
+
+#ksKitolt #ksStart,
+#ksKitolt .ksStart {
+    margin: 25px auto 0;
+    display: block
+}
+
+#ksKitolt button {
+    font-size: 15pt;
+    font-weight: 700;
+    padding: 20px 30px;
+    margin-top: 10px
+}
+
+#ksBackground {
+    position: absolute;
+    top: 45px;
+    background-size: 100%;
+    height: 600px;
+    display: block;
+    width: 100%;
+    z-index: -1;
+    left: 0;
+    background-attachment: fixed
+}
+
+#cimkeAjanlat {
+    display: block;
+    width: 97%;
+    padding: 6px 3px;
+    border: 1px #ccc solid
+}
+
+#cimkeAjanlat2 {
+    display: block
+}
+
+#cimkeAjanlat h5,
+#cimkeAjanlatKs h5 {
+    margin-top: 4px
+}
+
+#cimkeAjanlat h6,
+#cimkeAjanlatKs h6 {
+    margin-bottom: 2px
+}
+
+.cimkeAjanlatSpan,
+.cimkeAjanlatSpanKs {
+    background-color: #006363;
+    color: #fff;
+    padding: 2px 4px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    margin: 2px;
+    cursor: pointer;
+    float: left
+}
+
+#smartlabels {
+    padding-bottom: 4px;
+    margin-bottom: 0;
+    padding-top: 8px
+}
+
+#giveSome {
+    font-size: 9pt
+}
+
+#cimkekDiv {
+    display: block;
+    width: 97%;
+    min-height: 30px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    cursor: text
+}
+
+#cimkeAjanlat2 .cimkeAjanlatSpan {
+    margin: 0 2px 0 0!important
+}
+
+#cimkeAjanlat2 h5,
+#cimkekDiv2 h5 {
+    color: #000;
+    font-size: 10pt;
+    margin-bottom: 6px
+}
+
+#cimkekDiv2 {
+    display: block;
+    min-height: 30px;
+    background-color: #fff;
+    cursor: text;
+    margin-bottom: 14px
+}
+
+#cimkeAjanlat2 #noCimke {
+    font-weight: 400!important
+}
+
+#cimkekDiv .input-control,
+#cimkekDiv2 .input-control,
+#cimkekDivKs .input-control {
+    margin-bottom: 0!important;
+    padding: 1px
+}
+
+#cimkek {
+    border: none;
+    display: block
+}
+
+#cimkeAjanlatKs {
+    max-height: 150px;
+    overflow: auto;
+    display: block;
+    width: 100%;
+    padding: 6px 3px;
+    border: 1px #ccc solid
+}
+
+#cimkekDivKs {
+    height: 100px;
+    overflow: auto;
+    display: block;
+    width: 100%;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    cursor: text
+}
+
+#cimkekKs {
+    border: none;
+    display: block
+}
+
+#ksMain h2 {
+    margin: 0;
+    padding-left: 10px
+}
+
+#attachment_input {
+    display: none
+}
+
+.attachment_list_elem {
+    font-weight: 700
+}
+
+.attachment_close {
+    color: red
+}
+
+#under_szoveg {
+    width: 97%
+}
+
+#feladat_csalad {
+    float: right
+}
+
+#fcs_input {
+    display: none
+}
+
+.oldaltores {
+    border: 1px solid #999;
+    padding: 5px;
+    margin-bottom: 4px;
+    background-color: #ccc;
+    cursor: pointer;
+    margin-top: 0;
+    margin-left: 0;
+    position: relative
+}
+
+#jtable {
+    min-height: 150px
+}
+
+#jtable tr,
+#jtable tr td {
+    height: 20px;
+    max-height: 20px
+}
+
+.eredm_ess {
+    border-bottom: 12px;
+    padding: 5px;
+    font-size: 12pt;
+    height: auto!important;
+    cursor: default!important
+}
+
+.eredm_ess .pblock {
+    margin-right: 10px;
+    display: inline-block
+}
+
+.eredm_ess input {
+    height: auto!important
+}
+
+.eredm_ess input[type=number] {
+    width: 60px!important
+}
+
+.eredm_egy {
+    margin-bottom: 0!important
+}
+
+.eredm {
+    width: 100%;
+    color: #222;
+    font-family: Segoe UI, Arial, Sans-Serif
+}
+
+.eredm tr td:first-child {
+    width: 70%
+}
+
+.eredm tr td.essze {
+    width: 100%;
+    text-align: justify;
+    font-size: 11pt
+}
+
+.eredm tr td {
+    padding: 2px 4px
+}
+
+.eredm .kellett {
+    color: #16499a;
+    font-weight: 700
+}
+
+.eredm .good {
+    color: #51862d;
+    font-weight: 700
+}
+
+.eredm .wrong {
+    color: #000;
+    font-weight: 700
+}
+
+.jovalasz {
+    font-weight: 400!important;
+    color: #16499a!important;
+    font-family: Segoe UI!important;
+    line-height: 11pt!important;
+    font-size: 11pt!important;
+    text-align: justify!important;
+    margin: 5px 5px 0!important
+}
+
+.magyarazat {
+    font-weight: 400!important;
+    color: #000!important;
+    font-family: Segoe UI!important;
+    font-size: 10pt!important;
+    line-height: 11pt!important;
+    text-align: justify!important;
+    margin-top: 10px!important
+}
+
+#settingsBar {
+    margin-bottom: 4px
+}
+
+#settingsBar h3 {
+    padding-right: 10px;
+    float: left;
+    color: #bf0c2c;
+    margin: 3px
+}
+
+#ks #ksName {
+    max-width: 600px;
+    min-height: 30px
+}
+
+#csD #settingsBar h2 {
+    margin: 3px 3px 3px 0;
+    padding-right: 10px;
+    float: left
+}
+
+#settingsBar button {
+    padding-top: 6px;
+    padding-bottom: 6px;
+    margin: 2px 0
+}
+
+.oldaltoresExit {
+    float: right;
+    color: red;
+    font-weight: 700;
+    padding: 1px 4px;
+    font-family: Arial;
+    font-size: 12pt;
+    display: none
+}
+
+.oldaltoresExit:hover {
+    background-color: #aaa
+}
+
+#lastSaved {
+    font-size: 12px;
+    margin: 5px
+}
+
+#utoljaraMentve {
+    float: left
+}
+
+#idopont {
+    float: left
+}
+
+#loading {
+    background: #000;
+    opacity: .5;
+    position: fixed!important;
+    bottom: 0!important;
+    left: 0;
+    font-size: 14pt;
+    padding: 6px;
+    text-align: center;
+    z-index: 9999;
+    width: 168px;
+    color: #fff;
+    display: none
+}
+
+#flags {
+    position: absolute;
+    z-index: 999999;
+    top: 12px;
+    right: 12px
+}
+
+#percents2 {
+    margin-bottom: 5px
+}
+
+#percents tr td {
+    padding: 1px 3px;
+    vertical-align: text-top
+}
+
+#percents3 tr td,
+#percents3 tr th {
+    padding: 4px 2px;
+    vertical-align: text-bottom
+}
+
+#percents3 tr th {
+    padding-right: 10px
+}
+
+.grade-input {
+    width: 40px
+}
+
+#pontokEll {
+    font-weight: 700;
+    color: red;
+    display: none
+}
+
+#createSmartTestsheet,
+#delKs,
+#delGroup {
+    float: right
+}
+
+.popupw a:link,
+.popupw a:visited {
+    color: #666
+}
+
+.popupw a:hover,
+.popupw a:active {
+    color: #aaa
+}
+
+#vezerloBal {
+    float: left;
+    width: 380px;
+    margin-right: 20px;
+    margin-bottom: 10px
+}
+
+#vezerloBal .tile {
+    height: auto
+}
+
+#vezerloBal .brand {
+    position: initial
+}
+
+#vezerloPageKozep {
+    float: left;
+    width: 60%
+}
+
+#vezerloKozep {
+    float: left;
+    min-width: calc(100% - 800px);
+    margin-right: 20px;
+    margin-bottom: 10px
+}
+
+#vezerloJobb {
+    float: left;
+    width: 380px
+}
+
+#share {
+    width: 100%
+}
+
+#share .oszlop h2 {
+    font-size: 22px
+}
+
+#share .oszlop {
+    width: 100%;
+    float: left;
+    margin-right: 10px;
+    padding-right: 10px;
+    min-height: 150px;
+    max-width: 48%
+}
+
+#kitoltesekTable h4,
+#kitoltesekTable h5,
+#kitoltesekTable h6 {
+    margin: 0;
+    padding: 0;
+    color: #000
+}
+
+#kitoltesekTable {
+    margin-left: 5px
+}
+
+#eredmenyekContent h4 {
+    font-size: 14px;
+    margin-left: 5px
+}
+
+#eredmenyekContent .resultpanel {
+    margin-top: -1px
+}
+
+#eredmenyekContent .resultpanel .panel-header {
+    background: #fff;
+    color: #000;
+    font-size: 16px;
+    height: auto;
+    padding: 5px;
+    font-family: Segoe UI, Arial, Sans-Serif;
+    font-weight: 400
+}
+
+#eredmenyekContent .resultpanel .panel-header .theresult {
+    min-width: 150px;
+    display: inline-block
+}
+
+#eredmenyekContent .resultpanel .panel-header .name {
+    min-width: 160px;
+    display: inline-block
+}
+
+#eredmenyekContent .resultpanel .panel-header small {
+    display: inline-block
+}
+
+#eredmenyekContent .resultpanel .panel-content {
+    padding: 0 5px 5px
+}
+
+#kitoltesekTable .bold {
+    font-weight: 700
+}
+
+#kitoltesekTable h5 {
+    font-size: 14px;
+    font-family: Segoe UI, Arial, Sans-Serif;
+    font-weight: 400
+}
+
+#kitoltesekTable h6 {
+    font-size: 11px;
+    font-family: Segoe UI, Arial, Sans-Serif;
+    font-weight: 400
+}
+
+#kitoltesekTable tr td {
+    padding: 8px 4px;
+    vertical-align: bottom
+}
+
+#kitoltesekTablePreview h4,
+#kitoltesekTablePreview h5,
+#kitoltesekTablePreview h6 {
+    margin: 0;
+    padding: 0;
+    color: #000
+}
+
+#kitoltesekTablePreview .bold {
+    font-weight: 700
+}
+
+#kitoltesekTablePreview h5 {
+    font-family: Segoe UI, Arial, Sans-Serif;
+    font-weight: 400
+}
+
+#kitoltesekTablePreview h6 {
+    font-family: Segoe UI, Arial, Sans-Serif;
+    line-height: 8pt;
+    font-weight: 400
+}
+
+#kitoltesekTablePreview tr td {
+    padding: 4px 3px;
+    vertical-align: bottom
+}
+
+#kitoltesekTablePreview tr td i {
+    font-weight: 400;
+    font-size: 12px
+}
+
+.ks_stars .ks_star {
+    width: 20px;
+    height: 20px;
+    background: url(../img/star.png) 0 0 no-repeat;
+    display: inline-block;
+    position: relative;
+    top: 4px
+}
+
+.ks_stars .inner {
+    top: 0
+}
+
+.ks_stars .active {
+    background: url(../img/star.png) 0 -20px no-repeat
+}
+
+.star_vote {
+    padding-right: 12px;
+    text-align: left;
+    display: inline-block
+}
+
+.star_avg {
+    text-align: left;
+    display: inline-block
+}
+
+.ksEditVote {
+    font-weight: 400!important;
+    color: #000!important;
+    font-family: Segoe UI!important;
+    font-size: 10pt!important;
+    line-height: 11pt!important
+}
+
+#kerdesInfo {
+    margin: 10px;
+    padding: 12px 10px 10px;
+    display: none;
+    border: 1px solid #eaeaea;
+    font-size: 11pt
+}
+
+#kerdesInfo span {
+    padding: 0
+}
+
+#kerdesInfo table tr td {
+    padding: 2px
+}
+
+.infobar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 9999;
+    background: #bf0c2c;
+    width: 100%;
+    padding: 3px;
+    height: 24px;
+    color: #fff;
+    border-top: 1px solid #fff;
+    font-size: 13px
+}
+
+.infobar button {
+    padding: 0 3px 4px;
+    font-size: 10px
+}
+
+.attachment_div {
+    float: left;
+    width: 50%
+}
+
+.attachment_div a {
+    color: #000
+}
+
+#adiv2 input {
+    width: 90%;
+    margin-top: 2px
+}
+
+#multiple_choice_datas {
+    display: none
+}
+
+#endGrade {
+    font-weight: 700;
+    text-align: left
+}
+
+#ponthatarok {
+    font-size: 13pt;
+    margin-top: -6px;
+    margin-bottom: 12px
+}
+
+#ponthatarok h2 {
+    font-size: 24pt;
+    line-height: 24pt;
+    margin: 15px 0
+}
+
+#ponthatarok small {
+    font-size: 12pt
+}
+
+#ponthatarok small a {
+    cursor: pointer
+}
+
+#ponthatarok .ertek {
+    padding-right: 10px;
+    color: #aaa
+}
+
+#ponthatarok .elert {
+    color: #000;
+    font-weight: 700
+}
+
+#ponthatarok .jegy {
+    font-size: 18pt
+}
+
+#prevPage {
+    float: left
+}
+
+#nextPage {
+    float: right
+}
+
+.brwheader {
+    margin-top: 10px!important;
+    padding-top: 10px!important;
+    border-top: 1px solid #ccc
+}
+
+#press a {
+    color: #000
+}
+
+#press a:hover {
+    color: #a00
+}
+
+#press h1 {
+    margin-bottom: 20px
+}
+
+#press big {
+    font-weight: 700;
+    display: block
+}
+
+#press p {
+    margin: 30px 0
+}
+
+.adatdoboz a {
+    display: block;
+    width: 100%;
+    max-width: 250px;
+    float: left;
+    margin-right: 11px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd
+}
+
+.adatdoboz a:hover {
+    border: 1px solid #444
+}
+
+.adatdoboz .fej {
+    color: #fff;
+    font-size: 14pt;
+    padding: 4px 6px;
+    font-family: Segoe UI Light;
+    width: 100%;
+    max-width: 250px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis
+}
+
+.adatdoboz .fej.nemaktiv {
+    color: #000
+}
+
+.adatdoboz .content {
+    color: #000;
+    font-size: 11pt;
+    padding: 3px 6px;
+    text-align: center
+}
+
+.adatdoboz .content .info {
+    display: inline-block;
+    height: 56px
+}
+
+.adatdoboz .content .info span {
+    font-size: 32pt;
+    margin: 6px 18px
+}
+
+.adatdoboz .content .info .smaller {
+    font-size: 18pt;
+    margin: 10px 18px -10px;
+    display: block
+}
+
+.adatdoboz .content .info .rinfo {
+    position: relative;
+    top: 4px;
+    display: inline-block;
+    font-size: 9pt
+}
+
+.adatdoboz .elsofele {
+    height: 92px
+}
+
+.adatdoboz .meta {
+    background: #eee;
+    color: #000;
+    font-size: 10pt;
+    padding: 4px 6px
+}
+
+.adatdoboz .meta .tipus {
+    width: 25%;
+    float: left
+}
+
+.adatdoboz .meta .tulaj {
+    width: 70%;
+    float: right;
+    text-align: right
+}
+
+#csD #bal {
+    max-width: 72%
+}
+
+#csD #jobb {
+    max-width: 28%
+}
+
+#csD #bal,
+#csD #jobb {
+    width: 100%;
+    float: left;
+    margin-top: 6px
+}
+
+.userek a:link,
+.userek a:visited {
+    color: #000
+}
+
+.userek a:hover {
+    color: #666
+}
+
+.userek .userbox {
+    margin-bottom: 8px;
+    padding-left: 2px
+}
+
+.userek .userbox .name {
+    padding-left: 2px;
+    display: inline-block
+}
+
+.userek .userbox select {
+    padding: 1px!important
+}
+
+.userek .userbox button {
+    padding: 5px 7px 5px 6px;
+    margin-top: -1px
+}
+
+.userek .elvalaszto {
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 8px
+}
+
+#profilePicture {
+    display: block;
+    width: 150px;
+    float: left;
+    margin: 5px;
+    margin-right: 35px
+}
+
+#profilePicture2 {
+    display: block;
+    width: 150px;
+    float: left;
+    margin: 5px;
+    margin-bottom: 16px
+}
+
+#profPopupJobb {
+    max-width: 300px;
+    width: 100%;
+    float: right;
+    margin-top: 4px
+}
+
+#profPopupJobb button {
+    margin-top: 4px
+}
+
+#editProfilPic {
+    position: absolute;
+    background: #dfdfdf;
+    padding: 0 8px 4px;
+    color: #fff;
+    font-weight: 700;
+    margin-top: 5px;
+    margin-left: 124px;
+    display: block!important;
+    font-size: 16pt
+}
+
+#editProfilPic:hover {
+    background: #a7a7a7
+}
+
+#profil_div {
+    margin-top: 60px
+}
+
+#saveProfilChanges {
+    display: none
+}
+
+.profiltable tr th {
+    color: #aca37b;
+    text-align: left;
+    font-weight: 400;
+    width: 25%
+}
+
+#profil_div .profiltable {
+    width: 100%
+}
+
+#profil_div .profiltable tr th,
+#profil_div .profiltable tr td {
+    padding: 5px 10px
+}
+
+#profil_div .profiltr th,
+#profil_div .profiltr td {
+    border-bottom: 1px solid #dfdfdf
+}
+
+#profil_kiemelt_div .profiltable tr th,
+#profil_kiemelt_div .profiltable tr td {
+    padding: 2px 12px 2px 2px
+}
+
+.temamost .panel-header {
+    background: #a1cf17!important
+}
+
+.temamost .ido span {
+    color: #a1cf17!important
+}
+
+.temamost .ido {
+    background: #e2f1b8
+}
+
+.temamost .cstaddb {
+    background: #abd579;
+    color: #fff
+}
+
+.temamult .panel-header {
+    background: #878787!important
+}
+
+.temamult .ido span {
+    color: #878787!important
+}
+
+.temamult .ido {
+    background: #dbdbdb
+}
+
+.temajovo .panel-header {
+    background: #1f93d0!important
+}
+
+.temajovo .ido span {
+    color: #1f93d0!important
+}
+
+.temajovo .ido {
+    background: #bbdef1
+}
+
+.temajovo .cstaddb {
+    background: #71acdd;
+    color: #fff
+}
+
+.temakorpanel .taddd {
+    margin-top: 8px;
+    text-align: right
+}
+
+.temakorpanel {
+    max-width: 800px;
+    margin-bottom: 30px;
+    margin-right: 12px;
+    border: 0!important
+}
+
+.temakorpanel .panel-header {
+    padding: 16px!important
+}
+
+.temakorpanel .panel-header small {
+    font-size: 12pt
+}
+
+.temakorpanel .panel-header span {
+    float: right;
+    font-size: 12pt;
+    margin-top: -12px
+}
+
+.temakorpanel .panel-content {
+    padding: 0!important
+}
+
+.temakorpanel .ido {
+    display: block;
+    border-bottom: 1px solid #aeaeae;
+    padding: 8px;
+    color: #5f5f5f
+}
+
+.temakorpanel .ido span {
+    margin-right: 4px
+}
+
+.temakorpanel .sor {
+    display: block;
+    border-bottom: 1px solid #aeaeae;
+    padding: 8px;
+    color: #5f5f5f
+}
+
+.temakorpanel .sor span {
+    color: #aca27e;
+    margin-right: 4px
+}
+
+.temakido {
+    margin: 50px 0 20px;
+    padding: 0;
+    color: #5f5f5f;
+    font-size: 14pt;
+    font-weight: 700
+}
+
+.blockbutton {
+    display: block;
+    float: left;
+    margin: 7px
+}
+
+.cstedit:hover {
+    cursor: pointer;
+    text-decoration: underline
+}
+
+.nagyito {
+    background: #bf0c2c;
+    color: #fff;
+    padding: 6px;
+    position: relative;
+    font-weight: 400!important;
+    top: -22px;
+    height: 23px;
+    width: 23px;
+    display: block;
+    margin-bottom: -18px;
+    font-size: 12px!important
+}
+
+.halfsize {
+    width: 49%;
+    display: inline-block
+}
+
+.gotop {
+    margin-top: -17px;
+    position: relative
+}
+
+#apprvr {
+    padding: 25px;
+    font-size: 25px;
+    margin-bottom: 10px
+}
+
+.edoksij {
+    width: 150px;
+    float: left
+}
+
+.edoksij img {
+    vertical-align: top;
+    padding-right: 4px
+}
+
+.edoksib {
+    width: 75%;
+    float: right
+}
+
+#editFolders {
+    margin-top: 9px
+}
+
+#newKs,
+#editFolders {
+    padding-bottom: 6px;
+    padding-top: 6px
+}
+
+.folder_head {
+    margin-bottom: 8px;
+    padding-bottom: 5px;
+    font-size: 18px
+}
+
+.folder_head .folder_name {
+    float: left;
+    background: #eee;
+    padding: 6px
+}
+
+.folder_head .folder_name span {
+    font-size: 18px;
+    font-weight: 500;
+    position: relative;
+    top: 2px
+}
+
+.folder_head .folder_name a {
+    color: #000
+}
+
+.folder_head .folder_name a:hover {
+    text-decoration: underline
+}
+
+.folder_menu {
+    max-width: 1450px;
+    margin-bottom: 8px
+}
+
+.folder_menu .adatdoboz a {
+    min-width: 200px;
+    width: auto;
+    max-width: initial
+}
+
+.folder_menu .adatdoboz .fej {
+    padding: 10px;
+    max-width: initial
+}
+
+.folder_menu .adatdoboz .fej i {
+    float: right;
+    margin-top: 4px;
+    margin-left: 10px
+}
+
+.folder_item {
+    width: 100%;
+    font-size: 16px;
+    padding: 10px;
+    background: #eee;
+    margin: 5px 0
+}
+
+.folder_item.folder_has_hover {
+    cursor: pointer
+}
+
+.folder_item.folder_has_hover:hover {
+    background: #ccc
+}
+
+.folder_item.folder_selected,
+.folder_item.folder_selected.folder_has_hover:hover {
+    background: #bf0c2c;
+    color: #fff
+}
+
+.folder_item .icon-folder-edit {
+    float: right;
+    display: block;
+    color: #aaa;
+    padding: 12px;
+    position: relative;
+    top: -10px;
+    right: -10px;
+    cursor: pointer
+}
+
+.folder_item .icon-folder-edit:hover {
+    color: #000
+}
+
+.folder_selected .icon-folder-edit {
+    color: #fff
+}
+
+#newfolder {
+    margin-top: 5px;
+    padding-top: 5px;
+    border-top: 1px solid #eee
+}
+
+#newfolder input {
+    width: 280px
+}
+
+#newfolder button {
+    padding: 7px 12px
+}
+
+#folders_container {
+    max-height: 500px;
+    overflow: auto
+}
+
+#firstuse {
+    text-align: center;
+    margin-top: 80px
+}
+
+#firstuse h3 {
+    font-weight: 400;
+    color: #000
+}
+
+.pp_div h2 {
+    font-size: 22px;
+    margin-top: 0
+}
+
+#pp_value {
+    margin-top: 15px
+}
+
+#pp_add {
+    margin-top: -12px
+}
+
+#pp_btn {
+    margin-top: 15px
+}
+
+#percents input:disabled {
+    background: #eaeaea
+}
+
+#startdiv {
+    border: 1px solid #eaeaea;
+    padding: 0 20px;
+    font-weight: 300;
+    font-family: Segoe UI, Arial, Sans-Serif;
+    font-size: 17px
+}
+
+#startdiv h5 {
+    color: #000;
+    font-weight: 500;
+    font-family: Segoe UI Semibold, Segoe UI, Arial, Sans-Serif;
+    font-size: 18px;
+    line-height: 18px;
+    text-align: left;
+    margin: 20px 0 15px
+}
+
+#startdiv button {
+    margin: 5px 0 0!important;
+    display: block
+}
+
+#startdiv #ktn_bal button {
+    max-width: 90%
+}
+
+#startdiv #ktn_jobb button {
+    max-width: 100%
+}
+
+@media only screen and (max-width:620px) {
+    #startdiv #ktn_bal button,
+    #startdiv #ktn_jobb button {
+        padding: 10px;
+        font-size: 15px
+    }
+}
+
+#ktn_bal {
+    float: left;
+    width: 49%
+}
+
+#ktn_jobb {
+    float: left;
+    width: 49%
+}
+
+#deleteTempUserSession {
+    margin: 10px 0;
+    display: block;
+    font-size: 13px
+}
+
+.image-button.large [class*=icon-] {
+    padding: 10px
+}
+
+.buttonwide {
+    width: 100%
+}
+
+.buttonmbottom {
+    width: 100%;
+    margin-bottom: 6px
+}
+
+.buttonmtop {
+    width: 100%;
+    margin-top: 6px
+}
+
+.buttonmboth {
+    width: 100%;
+    margin: 6px 0
+}
+
+.doublemargintop {
+    margin-top: 20px
+}
+
+.objitem {
+    background: #eee;
+    color: #000!important;
+    cursor: pointer
+}
+
+.objitem a {
+    color: #000;
+    display: block
+}
+
+.objitem:hover {
+    background: #ccc
+}
+
+.objitem_active,
+.objitem_active:hover {
+    background: #bf0c2c;
+    color: #fff!important
+}
+
+.objitem_active a {
+    color: #fff
+}
+
+#groupFilter {
+    margin: 5px 0 15px;
+    font-size: 22px
+}
+
+#groupFilter .objitem {
+    padding: 5px 10px;
+    margin-left: 1px;
+    font-size: 16px;
+    position: relative;
+    top: -2px
+}
+
+#groupFilter .objname {
+    margin-right: 6px
+}
+
+.choosegroup {
+    padding: 10px;
+    margin: 5px;
+    font-size: 22px;
+    display: block
+}
+
+#changeview {
+    font-size: 22px;
+    margin-top: 20px
+}
+
+#changeview .objitem {
+    margin-top: 1px;
+    padding: 10px;
+    font-size: 18px
+}
+
+.korona {
+    width: 32px;
+    height: 32px;
+    position: relative;
+    top: -4px;
+    display: inline-block
+}
+
+.upfilename {
+    margin: 0 0 5px!important
+}
+
+.dgspace {
+    height: 15px
+}
+
+.dgb {
+    border: 1px solid #bf0c2c;
+    height: 17px;
+    width: 100%
+}
+
+.dgi {
+    height: 15px;
+    background: #bf0c2c;
+    font-size: 11px;
+    color: #fff;
+    width: 0%
+}
+
+.infotextarea {
+    width: 100%
+}
+
+.taskmp3 {
+    width: 100%
+}
+
+#loginscreen #message {
+    margin-bottom: 20px;
+    text-align: center
+}
+
+#loginscreen #messageborder {
+    border-bottom: 1px solid #eaeaea;
+    width: 95%;
+    margin: 0 auto;
+    margin-bottom: 20px
+}
+
+#loginscreen #loginerror {
+    margin-bottom: 4px;
+    color: #e51400
+}
+
+#loginscreen #loginform {
+    width: 50%;
+    border-right: 1px solid #eaeaea;
+    float: left;
+    margin-top: 10px;
+    padding: 30px 30px 10px 0
+}
+
+#loginscreen #logininfo {
+    width: 50%;
+    border-left: 1px solid #eaeaea;
+    margin-left: -1px;
+    margin-top: 24px;
+    padding: 30px 0 10px 24px;
+    float: left
+}
+
+#loginscreen #logininfo #smiley {
+    font-size: 120px;
+    color: #222
+}
+
+#loginscreen #logininfo h2 {
+    margin-top: 60px
+}
+
+#loginscreen #loginform h2,
+#temp_user_form h2 {
+    margin-left: -1px!important;
+    font-family: segoe ui, open sans, Verdana, Arial, Helvetica, sans-serif;
+    font-weight: 400
+}
+
+#loginscreen #loginform h2 small {
+    display: inline-block;
+    float: right
+}
+
+#loginscreen h4,
+#temp_user_form h4 {
+    margin-top: 20px;
+    font-weight: 400;
+    font-family: segoe ui, open sans, Verdana, Arial, Helvetica, sans-serif
+}
+
+#temp_user_form h4 {
+    margin-top: 10px;
+    margin-bottom: 30px
+}
+
+#loginscreen .half-sized-reginput {
+    width: 50%;
+    float: left
+}
+
+#loginscreen .w_padding {
+    padding-right: 10px
+}
+
+#loginscreen .regerror {
+    color: #e51400
+}
+
+#loginscreen .regerror_i input {
+    border: 1px solid #e51400!important
+}
+
+#loginscreen .reg_checkbox {
+    font-size: 12px;
+    font-style: italic;
+    margin-bottom: 0
+}
+
+#loginscreen .reg_submit {
+    margin-top: 6px
+}
+
+#loginscreen input:disabled {
+    cursor: progress!important
+}
+
+@media only screen and (max-width:670px) {
+    #loginscreen #loginform,
+    #loginscreen #logininfo {
+        float: none;
+        border: 0;
+        width: 100%;
+        padding: 0
+    }
+    #loginscreen #logininfo {
+        margin-top: 40px
+    }
+    #loginscreen #loginform {
+        margin-top: 10px;
+        border-bottom: 1px solid #eaeaea
+    }
+}
+
+@media only screen and (max-width:420px) {
+    #loginscreen small {
+        font-size: 14px
+    }
+}
+
+@media only screen and (max-width:350px) {
+    #loginscreen small span {
+        display: none
+    }
+}
+
+#temp_user_form {
+    padding: 5px
+}
+
+#temp_user_form_inner {
+    width: 60%;
+    border-right: 1px solid #eaeaea;
+    float: left;
+    margin-top: 10px;
+    padding: 10px 30px 10px 0
+}
+
+#temp_user_info {
+    width: 40%;
+    border-left: 1px solid #eaeaea;
+    margin-left: -1px;
+    margin-top: 10px;
+    padding: 10px 0 10px 24px;
+    float: left
+}
+
+.seelater {
+    font-size: 7pt;
+    margin-top: 4pt
+}
+
+@media only screen and (max-width:480px) {
+    #temp_user_form_inner,
+    #temp_user_info {
+        float: none;
+        border: 0;
+        width: 100%;
+        padding: 0
+    }
+    #temp_user_form_inner {
+        border-bottom: 1px solid #eaeaea;
+        padding-bottom: 20px;
+        margin-bottom: 20px
+    }
+}
+
+.randomorder_chbox {
+    margin: 12px 0 0!important;
+    cursor: pointer!important;
+    display: block!important
+}
+
+.randomorder_chbox label {
+    cursor: pointer!important
+}
+
+.lname {
+    font-weight: 700;
+    font-family: Segoe UI, Arial, Sans-Serif
+}
+
+#csD #bal .panel {
+    margin-right: 20px;
+    margin-bottom: 20px
+}
+
+#csD #bal .panel-content {
+    padding-bottom: 0
+}
+
+#csD #bal .panel-content h4 {
+    padding-bottom: 5px
+}
+
+#csD #jobb .panel-content {
+    padding-bottom: 5px
+}
+
+#csD #jobb .panel-content h5 {
+    text-align: justify
+}
+
+#csD #dcim {
+    display: inline-block
+}
+
+#csD .csow {
+    margin-bottom: 15px
+}
+
+#jumperpage {
+    max-width: 800px;
+    width: 100%;
+    margin: 24px auto 0
+}
+
+#jumperpage input[type=text] {
+    width: 50%;
+    width: -moz-calc(100% - 150px);
+    width: -webkit-calc(100% - 150px);
+    width: -o-calc(100% - 150px);
+    width: calc(100% - 150px)
+}
+
+#jumperpage button {
+    width: 145px
+}
+
+#jumperpage h2 {
+    text-align: justify;
+    font-size: 16pt;
+    line-height: 17pt;
+    margin-top: 15px
+}
+
+#jumperpage input,
+#jumperpage button {
+    font-size: 24pt;
+    height: auto;
+    padding: 6px;
+    line-height: normal
+}
+
+.j_row {
+    border-top: 1px solid #eaeaea;
+    margin: 40px auto;
+    width: 98%
+}
+
+#j_about {
+    max-width: 800px;
+    width: 100%;
+    margin: 0 auto
+}
+
+#j_about h2 {
+    margin-top: 40px
+}
+
+#j_about #j_thejumpers span {
+    padding: 12px;
+    background: #ddd;
+    color: #000;
+    display: inline-block;
+    margin-right: 10px;
+    cursor: pointer
+}
+
+#j_about #j_thejumpers span:hover,
+#j_about #j_thejumpers span:active {
+    background: #bbb
+}
+
+@media only screen and (max-width:400px) {
+    #jumperpage {
+        margin-top: 4px
+    }
+    #jumperpage h2 {
+        font-size: 15pt;
+        line-height: 16pt
+    }
+    #jumperpage input,
+    #jumperpage button {
+        width: 100%!important;
+        font-size: 18pt
+    }
+    #jumperpage input {
+        margin-bottom: 5px
+    }
+    #j_about h2 {
+        margin-top: 30px
+    }
+    .j_row {
+        margin: 30px auto;
+        width: 100%
+    }
+}
+
+.match_container .pair {
+    width: 190px;
+    text-align: center;
+    padding: 10px 0;
+    margin-bottom: 4px;
+    border: 1px solid #fff;
+    vertical-align: middle;
+    z-index: 1
+}
+
+.match_container .first {
+    float: left;
+    margin-right: 5px;
+    background: #c5c5c5
+}
+
+.match_container .second {
+    background: #ddd
+}
+
+.match_container .cont {
+    float: left;
+    width: 190px;
+    border: 1px dashed #ddd;
+    margin-bottom: 4px
+}
+
+.match_container .onmove {
+    border: 1px solid #888;
+    z-index: 9999
+}
+
+.match_container .prob_pair {
+    border: 1px solid #888;
+    z-index: 99999;
+    position: relative;
+    cursor: pointer
+}
+
+.match_container .match_l {
+    float: left
+}
+
+.match_container .match_r {
+    float: right;
+    width: 190px
+}
+
+@media only screen and (max-width:610px) {
+    .match_container .pair,
+    .match_container .match_r,
+    .match_container .cont,
+    .match_container .match_l {
+        width: 100%;
+        float: none
+    }
+    .match_container .cont {
+        margin-bottom: 15px
+    }
+    .match_container .match_l {
+        margin-bottom: 30px
+    }
+}
+
+.matching_table {
+    width: 33%!important;
+    color: #000;
+    font-weight: 400;
+    text-align: center;
+    padding: 10px 0!important;
+    margin: 0!important;
+    background: #ddd;
+    border-right: 6px solid #fff;
+    border-bottom: 6px solid #fff
+}
+
+.matching_table div {
+    width: 100%;
+    text-align: center
+}
+
+.matching_table_first_cell,
+.matching_table_second_cell {
+    background: #c5c5c5
+}
+
+.matching_table_second_cell {
+    border-right: 20px solid #fff!important
+}
+
+.eredm .sorrend_label {
+    width: 33%!important;
+    font-weight: 700;
+    border-right: 20px solid #fff!important;
+    padding-bottom: 6px
+}
+
+.matching_pairs {
+    margin-bottom: 5px
+}
+
+#sorrend_form .valasz_opcio {
+    margin-bottom: 5px
+}
+
+#sorrend_form input[type=text] {
+    min-width: 80%
+}
+
+.sorrend_container {
+    overflow: auto
+}
+
+.sorrend_solve_item,
+.sorrend_n_cont div {
+    background: #ddd;
+    padding: 10px;
+    margin: 4px 0;
+    overflow: hidden;
+    border: 1px solid #fff
+}
+
+.sorrend_n_cont {
+    float: left;
+    margin-right: 1px
+}
+
+.sorrend_n_cont div {
+    text-align: center;
+    overflow: hidden
+}
+
+.sorrend_solve_item i {
+    padding: 2px
+}
+
+.need_to_drag1 {
+    font-size: 9pt
+}
+
+.need_to_drag2 {
+    font-size: 9pt;
+    display: none
+}
+
+#ksKitolt .sorrend_vezerlo {
+    margin-bottom: 10px
+}
+
+#ksKitolt .sorrend_vezerlo .sorrend_default {
+    display: none
+}
+
+#ksKitolt .sorrend_vezerlo button {
+    margin: 0;
+    font-size: 10pt;
+    padding: 5px 10px;
+    margin-right: 5px
+}
+
+#feedbacktool {
+    position: fixed;
+    bottom: 14px;
+    right: 14px;
+    background: url(../img/lab_fb_logo.png) no-repeat;
+    background-size: contain;
+    width: 50px;
+    height: 50px;
+    z-index: 9999996;
+    cursor: pointer
+}
+
+#feedbacktool.opened {
+    background-image: url(../img/lab_fb_logo2.png)
+}
+
+#feedbackform {
+    position: fixed;
+    bottom: 0;
+    right: 15px;
+    z-index: 999999;
+    padding: 20px;
+    max-width: 320px;
+    width: 100%;
+    height: 480px;
+    background: #fff;
+    display: none;
+    opacity: 0;
+    background: #ccc;
+    border-radius: 15px 15px 15px 15px
+}
+
+#feedbackform #feedbacktitle {
+    font-family: AmsiProNarw-Thin, Arial;
+    font-size: 32px;
+    line-height: 40px;
+    margin-bottom: 24px;
+    background-size: contain;
+    width: 260px;
+    height: 76px;
+    color: transparent
+}
+
+#feedbackform #fb_topic,
+#feedbackform #fb_feeling {
+    font-family: AmsiProNarw-Light, Arial;
+    font-size: 15px
+}
+
+#feedbackform #fb_topic {
+    display: block;
+    float: left;
+    margin-top: 7px;
+    padding-right: 10px;
+    margin-bottom: 25px
+}
+
+#feedbackform select {
+    width: auto;
+    background: #ccc;
+    margin-left: 5px;
+    border-radius: 15px;
+    border: 1px solid #595959
+}
+
+#feedbackform #fb_topic select option:hover {
+    background: #ccc;
+    color: #fff
+}
+
+#feedbackform #fb_message {
+    background: url(../img/lab_fb_textarea.png);
+    background-attachment: local;
+    height: 160px;
+    font-size: 15px;
+    line-height: 29px;
+    padding: 0 5px;
+    width: 100%;
+    border: 0;
+    resize: none;
+    font-family: AmsiProNarw-Light, Arial;
+    margin-top: 5px
+}
+
+#feedbackform button {
+    border: 1px solid #595959;
+    border-radius: 15px;
+    padding: 10px 20px;
+    color: #000;
+    background: 0 0;
+    font-size: 15px;
+    margin-top: 5px;
+    position: relative
+}
+
+#feedbackform button:focus {
+    background: 0 0!important;
+    border-color: #fff;
+    color: #fff
+}
+
+#feedbackform #fb_error {
+    color: #50b7af;
+    font-family: AmsiProNarw-Light, Arial;
+    font-size: 15px;
+    margin-top: -2px;
+    margin-bottom: 2px;
+    opacity: 0;
+    display: none
+}
+
+#feedbackform #fb_thanks {
+    color: #50b7af;
+    font-family: AmsiProNarw-Light, Arial;
+    font-size: 22px;
+    display: inline-block;
+    padding-top: 8px;
+    display: none;
+    margin-top: -20px;
+    position: absolute;
+    border-bottom: 1px solid #50b7af
+}
+
+#feedbackform #fb_footer {
+    margin-top: 35px
+}
+
+#feedbackform #fb_feeling {
+    display: inline-block;
+    position: relative;
+    top: -13px;
+    margin-right: 2px;
+    margin-bottom: 3px
+}
+
+#feedbackform .fb_feeling_head {
+    width: 38px;
+    height: 38px;
+    background-size: contain;
+    display: inline-block;
+    margin-left: 3px;
+    cursor: pointer
+}
+
+#feedbackform #fb_feeling_1 {
+    background-image: url(../img/fb_head_1.gif)
+}
+
+#feedbackform #fb_feeling_2 {
+    background-image: url(../img/fb_head_2.gif)
+}
+
+#feedbackform #fb_feeling_3 {
+    background-image: url(../img/fb_head_3.gif)
+}
+
+#feedbackform #fb_feeling_1.fb_fl_active {
+    background-image: url(../img/fb_head_1h.gif)
+}
+
+#feedbackform #fb_feeling_2.fb_fl_active {
+    background-image: url(../img/fb_head_2h.gif)
+}
+
+#feedbackform #fb_feeling_3.fb_fl_active {
+    background-image: url(../img/fb_head_3h.gif)
+}
+
+#feedbacktitle,
+#blokk1,
+#blokk2,
+#fb_message,
+#fb_footer {
+    display: none;
+    opacity: 0
+}
+
+@media only screen and (max-height:480px) {
+    #feedbackform {
+        height: 100%;
+        overflow-y: auto
+    }
+    #feedbackform #fb_topic {
+        padding-right: 6px
+    }
+}
+
+#redmentalab #labpage a {
+    color: #000
+}
+
+#redmentalab #footer {
+    border-top-color: #8c8c8c
+}
+
+#redmentalab,
+#redmentalab #footer {
+    background: #cacaca!important
+}
+
+#redmentalab #content {
+    background: url(../img/lab_back.jpg) no-repeat;
+    background-size: contain;
+    padding-top: 60px
+}
+
+#redmentalab #labpage {
+    max-width: 760px;
+    margin: 0 auto
+}
+
+#redmentalab #labhead div {
+    float: left
+}
+
+#redmentalab #labhead #lablogo {
+    background: url(../img/lab_logo.png) no-repeat;
+    width: 93px;
+    height: 93px;
+    background-size: contain;
+    margin-top: 10px
+}
+
+#redmentalab #labhead #labrow {
+    background: #f87d58;
+    width: 10px;
+    height: 210px;
+    border-radius: 20px;
+    margin: 10px 20px 0 30px
+}
+
+#redmentalab #labhead #labtext {
+    font-size: 76px;
+    line-height: 70px;
+    max-width: 480px;
+    font-family: AmsiProNarw-Ultra, Arial
+}
+
+#redmentalab #labcontent {
+    margin-top: 70px
+}
+
+#redmentalab #labcontent .labtitle {
+    font-size: 24px;
+    font-family: AmsiProNarw-Ultra, Arial;
+    margin: 35px 0 25px
+}
+
+#redmentalab #labcontent .labinner {
+    font-size: 15px;
+    line-height: 25px;
+    font-family: HelveticaNeue, Arial
+}
+
+#redmentalab #labcontent button,
+#redmentalab #labcontent button:focus {
+    background: 0 0!important;
+    border: 3px solid #f87d58!important;
+    color: #50b7af!important;
+    font-family: AmsiProNarw-Ultra, Arial;
+    font-size: 21px;
+    line-height: initial;
+    padding: 4px 20px 8px;
+    border-radius: 4px
+}
+
+#redmentalab #labcontent form {
+    margin-top: 70px
+}
+
+#redmentalab #labcontent .applytext {
+    display: inline-block;
+    font-size: 18px;
+    font-family: AmsiProNarw-Ultra, Arial;
+    padding-bottom: 6px;
+    border-bottom: 3px solid;
+    margin-right: 30px;
+    margin-bottom: 15px
+}
+
+#redmentalab #labcontent .applynow {
+    border-bottom-color: #f87d58
+}
+
+#redmentalab #labcontent .applied {
+    border-bottom-color: #50b7af
+}
+
+@media only screen and (max-width:700px) {
+    #redmentalab #labhead #lablogo,
+    #redmentalab #labhead #labrow {
+        display: none
+    }
+    #redmentalab #labhead #labtext {
+        font-size: 60px;
+        line-height: 56px
+    }
+    #redmentalab #labcontent form {
+        margin: 40px 0
+    }
+}
+
+.ui-selectable {
+    -ms-touch-action: none;
+    touch-action: none
+}
+
+.ui-selectmenu-menu {
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: none;
+    z-index: 999991;
+    background: #ccc
+}
+
+.ui-selectmenu-menu .ui-menu {
+    overflow: auto;
+    overflow-x: hidden;
+    padding-bottom: 1px;
+    border: 1px solid #595959;
+    border-radius: 15px
+}
+
+.ui-selectmenu-open {
+    display: block
+}
+
+.ui-selectmenu-button {
+    display: inline-block;
+    overflow: hidden;
+    position: relative;
+    text-decoration: none;
+    cursor: pointer
+}
+
+.ui-selectmenu-button span.ui-icon {
+    right: .5em;
+    left: auto;
+    margin-top: -8px;
+    position: absolute;
+    top: 50%
+}
+
+.ui-selectmenu-button span.ui-selectmenu-text {
+    text-align: left;
+    padding: .4em 2.1em .4em 1em;
+    display: block;
+    line-height: 1.4;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-family: AmsiProNarw-Light, Arial;
+    font-size: 15px;
+    border: 1px solid #595959;
+    border-radius: 15px
+}
+
+.ui-menu {
+    list-style: none;
+    padding: 0;
+    margin: 0!important;
+    display: block;
+    outline: none
+}
+
+.ui-menu .ui-menu {
+    position: absolute
+}
+
+.ui-menu .ui-menu-item {
+    position: relative;
+    margin: 0;
+    padding: 6px 0;
+    cursor: pointer;
+    font-family: AmsiProNarw-Light, Arial;
+    font-size: 15px;
+    min-height: 0;
+    list-style-image: url(data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7)
+}
+
+.ui-menu .ui-state-focus,
+.ui-menu .ui-state-active {
+    color: #fff
+}
+
+.ui-icon-triangle-1-s {
+    background-position: -64px -16px
+}
+
+.ui-icon {
+    z-index: 999999;
+    background-image: url(../img/ui-icons_222222_256x240.png);
+    width: 16px;
+    height: 16px;
+    display: block
+}
+
+#qr_page {
+    text-align: center
+}
+
+#case_sensitive_div {
+    margin-bottom: 0;
+    margin-top: 10px
+}
+
+#egyszavas_table th {
+    text-align: left
+}
+
+#tocatalog {
+    margin-top: 10px;
+    border: 3px solid #f87d58;
+    background-color: #cacaca;
+    padding: 8px;
+    border-radius: 4px
+}
+
+#tocatalog h2 {
+    padding-bottom: 8px;
+    border-bottom: 3px solid #f87d58;
+    font-weight: 700
+}
+
+#catalogMenu {
+    background: #fff;
+    border: 3px solid #f87d58;
+    color: #50b7af;
+    font-weight: 700;
+    padding: 12px 15px;
+    border-radius: 4px
+}
+
+#catalogBody {
+    background-color: #bf0c2c;
+    font-family: Arial, Helvetica, sans-serif
+}
+
+#catalogPage {
+    padding: 0 6%
+}
+
+#catalogPage h2 {
+    font-size: 5.5rem;
+    line-height: 6rem;
+    letter-spacing: -2.94px;
+    font-weight: 700;
+    color: #fff
+}
+
+#catalogPage h3 {
+    color: #fff
+}
+
+#catalogPage p {
+    font-size: 2rem;
+    line-height: 3rem;
+    letter-spacing: -1.12px;
+    color: #fff
+}
+
+#catalogFiltersBox {
+    border: 1px solid #fff;
+    display: flex;
+    padding: 10px 10px 0;
+    align-items: center
+}
+
+#catalogFilters {
+    display: flex;
+    flex: 1 1 100%;
+    padding-right: 10px
+}
+
+#catalogFilters>div {
+    flex: 1 1 30%;
+    padding-left: 10px
+}
+
+#catalogFilters>div:first-child {
+    padding-left: 0
+}
+
+.select2-container .select2-selection--single {
+    height: 32px!important
+}
+
+#catalogBoxContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center
+}
+
+.catalogBox {
+    width: 400px;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 4px;
+    border: 1px solid #d4d4d4;
+    background-color: #fff;
+    color: #4c4a6d;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between
+}
+
+.catalogBoxMain {
+    height: 140px;
+    margin-bottom: 10px;
+    overflow: hidden
+}
+
+.catalogBoxAuthor,
+.catalogBoxDesc {
+    font-size: 14px;
+    letter-spacing: -.56px;
+    line-height: 20px
+}
+
+.catalogBoxAuthor {
+    line-height: 32px
+}
+
+.catalogBoxTitle {
+    font-size: 25px;
+    letter-spacing: -1px;
+    line-height: 34px
+}
+
+.catalogBoxMeta span {
+    background-color: #d8d8d8;
+    display: inline-block;
+    padding: 2px 4px;
+    margin-bottom: 4px
+}
+
+.catalogBoxActions {
+    margin-top: 6px;
+    padding-top: 10px;
+    border-top: 1px solid #d8d8d8;
+    display: flex;
+    align-items: center
+}
+
+.catalogBoxActions .catalogBoxActionOpen {
+    border-radius: 4px;
+    background-color: #9fceab;
+    color: #fff;
+    margin-right: 10px
+}
+
+.catalogBoxActions .catalogBoxActionOpen:hover {
+    color: #fff!important;
+    opacity: .85
+}
+
+.catalogBoxActions button {
+    border-radius: 4px;
+    background-color: #ff5316;
+    color: #fff;
+    margin-right: 10px
+}
+
+.catalogBoxActions button:hover {
+    opacity: .85
+}
+
+.catalogBoxActions div {
+    margin-right: 10px;
+    font-size: 1.8rem;
+    font-weight: 700
+}
+
+@media only screen and (max-width:600px) {
+    #catalogFiltersBox,
+    #catalogFilters {
+        flex-direction: column
+    }
+    #catalogFilters>div {
+        padding-left: 0
+    }
+}
+
+.metro #new_popup_2020_overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: .9;
+    background-color: #efefef;
+    z-index: 425420
+}
+
+.metro #new_popup_2020 {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 425421;
+    width: 100%;
+    max-width: 720px;
+    border-radius: 9px;
+    background-color: #fff;
+    max-height: 100%;
+    overflow: auto
+}
+
+.metro #new_popup_2020 * {
+    font-family: CircularStd, Segoe UI, segoe ui_, open sans, Verdana, Arial, Helvetica, sans-serif
+}
+
+.metro #new_popup_2020_head {
+    background-color: #dbeee0;
+    padding: 30px 55px;
+    border-radius: 9px 9px 0 0;
+    font-size: 16px;
+    color: gray
+}
+
+.metro .new_popup_2020_szia {
+    font-weight: 900;
+    color: #4c4a6d
+}
+
+.metro #new_popup_2020_content {
+    padding: 30px 55px
+}
+
+.metro #new_popup_2020_content h2 {
+    font-size: 22px;
+    font-weight: 700;
+    color: #ff5316;
+    margin: 0
+}
+
+.metro .new_popup_2020_content_gombok {
+    margin-top: 20px;
+    margin-bottom: 10px
+}
+
+.metro .new_popup_2020_inputs {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between
+}
+
+.metro .new_popup_2020_inputs>* {
+    margin-right: 10px
+}
+
+.metro .new_popup_2020_inputs .input-control {
+    font-size: 12px;
+    margin-bottom: 20px
+}
+
+.metro .gomb_2020_container {
+    margin-left: -10px;
+    margin-right: -10px;
+    display: flex;
+    flex-wrap: wrap
+}
+
+.metro .gomb_2020_container .gomb_2020 {
+    flex: 1;
+    min-width: 180px
+}
+
+.metro .gomb_2020 {
+    position: relative;
+    border-radius: 10px;
+    padding: 20px;
+    font-size: 20px;
+    line-height: 20px;
+    margin: 0 10px 20px;
+    text-align: left;
+    font-weight: 900
+}
+
+.metro .gomb_2020.gomb_2020_dot {
+    padding-left: 45px
+}
+
+.metro .gomb_2020.gomb_2020_dot::before {
+    content: '';
+    position: absolute;
+    background: #fff;
+    width: 15px;
+    height: 15px;
+    left: 16px;
+    top: 21px;
+    border-radius: 50%
+}
+
+.metro .gomb_2020:active {
+    opacity: .8
+}
+
+.metro .gomb_2020.gomb_2020_orange {
+    color: #fff!important;
+    background-color: #ff5316!important
+}
+
+.metro .gomb_2020.gomb_2020_green {
+    color: #fff!important;
+    background-color: #9fceab!important
+}
+
+.metro .gomb_2020.gomb_2020_yellow {
+    color: #4c4a6d!important;
+    background-color: #f8bc65!important
+}
+
+.metro .gomb_2020.gomb_2020_blue {
+    color: #fff!important;
+    background-color: #4c4a6d!important
+}
+
+.metro .kor_2020_nav .gomb_2020 {
+    font-size: 12px;
+    line-height: 1;
+    font-weight: 400;
+    margin-bottom: 0;
+    padding: 9px 12px;
+    border-radius: 5px;
+    margin: 0;
+    margin-right: 10px
+}
+
+.metro .kor_2020_nav .gomb_2020:last-child {
+    margin-right: 0
+}
+
+.metro .kor_2020_nav {
+    display: flex;
+    justify-content: center;
+    align-items: center
+}
+
+.metro .kor_2020 {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: #d8d8d8;
+    margin: 0 5px
+}
+
+.metro .kor_2020_active {
+    border: solid 3px #979797
+}
+
+.metro button.kor_2020_next {
+    color: #fff!important;
+    background-color: #ff5316!important;
+    border-radius: 5px;
+    margin-left: 15px
+}
+
+.metro .kor_2020_next:active {
+    opacity: .8
+}
+
+.metro #new_banner_2020 {
+    margin: 0 auto 30px;
+    max-width: 1000px;
+    min-height: 236px;
+    border-radius: 22px;
+    background-color: #efefef;
+    display: flex;
+    flex-wrap: wrap
+}
+
+.metro #new_banner_2020>*:last-child {
+    flex: 1;
+    margin-left: 40px
+}
+
+.metro #new_banner_2020 * {
+    font-family: CircularStd, Segoe UI, segoe ui_, open sans, Verdana, Arial, Helvetica, sans-serif
+}
+
+.metro #new_banner_2020_main_img {
+    margin-left: 70px
+}
+
+@media(max-width:760px) {
+    .metro #new_banner_2020_main_img {
+        margin-left: 30px;
+        margin-right: 30px
+    }
+    .metro #new_banner_2020>*:last-child {
+        margin-left: 0
+    }
+}
+
+.metro #new_banner_2020_content {
+    padding: 30px
+}
+
+.metro #new_banner_2020_content .new_banner_2020_content_page {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%
+}
+
+.metro #new_banner_2020_content h2 {
+    font-size: 24px;
+    line-height: 30px;
+    font-weight: 900;
+    color: #ff5316;
+    margin-top: 0;
+    margin-bottom: 15px
+}
+
+.metro #new_banner_2020_content p {
+    color: #4c4a6d;
+    font-size: 14px;
+    line-height: 18px
+}
+
+#nonprofit * {
+    font-family: CircularStd, Segoe UI, segoe ui_, open sans, Verdana, Arial, Helvetica, sans-serif;
+    max-width: 100%
+}
+
+#nonprofit_head .nonprofit_inner {
+    display: flex;
+    flex-wrap: wrap
+}
+
+#nonprofit_head .nonprofit_inner>div:first-child {
+    margin-right: 20px
+}
+
+#nonprofit_head .nonprofit_inner>div:last-child {
+    flex: 1
+}
+
+#nonprofit_head .nonprofit_inner h1 {
+    font-size: 41px;
+    font-weight: 700;
+    line-height: 1.12;
+    color: #9fceab;
+    margin: 15px 0;
+    word-wrap: break-word
+}
+
+@media(max-width:500px) {
+    #nonprofit_head .nonprofit_inner h1 {
+        font-size: 25px
+    }
+}
+
+#nonprofit_head .nonprofit_inner #nonprofit_gombok button {
+    color: #fff!important;
+    background-color: #ff5316!important;
+    padding: 12px;
+    border-right: 1px solid #f8bc65
+}
+
+#nonprofit_head .nonprofit_inner #nonprofit_gombok button:first-child {
+    border-radius: 21px 0 0 21px;
+    padding-left: 24px
+}
+
+#nonprofit_head .nonprofit_inner #nonprofit_gombok button:last-child {
+    border-radius: 0 21px 21px 0;
+    padding-right: 24px;
+    border-right: 0
+}
+
+#nonprofit_head .nonprofit_inner #nonprofit_gombok button:active {
+    opacity: .8
+}
+
+@media(max-width:400px) {
+    #nonprofit_head .nonprofit_inner #nonprofit_gombok button {
+        display: block;
+        width: 100%;
+        border-right: 0;
+        border-bottom: 1px solid #f8bc65
+    }
+    #nonprofit_head .nonprofit_inner #nonprofit_gombok button:first-child {
+        border-radius: 21px 21px 0 0
+    }
+    #nonprofit_head .nonprofit_inner #nonprofit_gombok button:last-child {
+        border-radius: 0 0 21px 21px;
+        border-bottom: 0
+    }
+}
+
+#nonprofit h2 {
+    font-size: 33px;
+    line-height: 43px;
+    margin-bottom: 20px;
+    font-weight: 900;
+    color: #ff5316
+}
+
+#nonprofit p {
+    font-size: 18px;
+    line-height: 1.78;
+    color: #4c4a6d;
+    margin: 20px 0
+}
+
+#nonprofit .nonprofit_bluebox {
+    background-color: #e4e4ef;
+    padding-bottom: 120px;
+    background-image: url(../nonprofit/group-3.png);
+    background-repeat: no-repeat;
+    background-position: bottom center
+}
+
+#nonprofit .nonprofit_bluebox h2 {
+    color: #4c4a6d
+}
+
+#nonprofit .nonprofit_bluebox p {
+    color: #4c4a6d
+}
+
+#nonprofit .nonprofit_columns .nonprofit_inner {
+    display: flex;
+    flex-wrap: wrap
+}
+
+#nonprofit .nonprofit_columns .nonprofit_inner>* {
+    margin: 0 20px
+}
+
+#nonprofit .nonprofit_columns .nonprofit_inner .nonprofit_column_text {
+    flex: 1
+}
+
+#nonprofit .nonprofit_columns .nonprofit_inner>*:first-child {
+    margin-left: 0
+}
+
+#nonprofit .nonprofit_columns .nonprofit_inner>*:last-child {
+    margin-right: 0
+}
+
+#nonprofit .nonprofit_inner {
+    padding: 20px;
+    padding-top: 60px;
+    max-width: 1200px;
+    margin: 0 auto
+}
+
+#nonprofit ul li {
+    font-size: 18px;
+    line-height: 1.78;
+    color: #4c4a6d;
+    margin: 20px 0
+}
+
+#nonprofit .nonprofit_column_hl {
+    width: 100%
+}
+
+#nonprofit .nonprofit_orange {
+    color: #f4cdba;
+    background-color: #ff5316;
+    background-image: url(../nonprofit/group-3-copy.png);
+    background-repeat: no-repeat;
+    background-position: top center;
+    margin-top: 70px;
+    padding-top: 140px
+}
+
+#nonprofit .nonprofit_orange * {
+    color: #f4cdba
+}
+
+#nonprofit .nonprofit_orange h1 {
+    font-size: 53px;
+    font-weight: 900;
+    text-align: center;
+    line-height: 1;
+    word-wrap: break-word
+}
+
+@media(max-width:500px) {
+    #nonprofit .nonprofit_orange h1 {
+        font-size: 35px
+    }
+}
+
+#nonprofit .nonprofit_orange .nonprofit_columns .nonprofit_inner {
+    margin-top: 70px
+}
+
+#nonprofit .nonprofit_orange .nonprofit_columns .nonprofit_inner img {
+    float: left;
+    margin-right: 15px
+}
+
+#nonprofit .nonprofit_orange .nonprofit_columns .nonprofit_inner h2 {
+    color: #fff
+}
+
+#nonprofit .nonprofit_orange .nonprofit_columns .nonprofit_inner p {
+    font-size: 23px;
+    font-style: italic;
+    line-height: 1.65;
+    margin-top: 10px
+}
+
+#nonprofit .nonprofit_orange h4 {
+    text-transform: uppercase;
+    font-size: 16px;
+    line-height: 2;
+    letter-spacing: 6px;
+    color: #f8bc65;
+    padding: 20px
+}
+
+#nonprofit .nonprofit_orange h5 {
+    font-weight: 900;
+    color: #fff;
+    font-size: 18px;
+    line-height: 1.78
+}
+
+#nonprofit .nonprofit_orange .nonprofit_goals {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px
+}
+
+#nonprofit .nonprofit_orange .nonprofit_goals>div {
+    flex: 1;
+    padding-top: 25px;
+    padding-right: 60px;
+    border-top: 1px solid #f4cdba;
+    position: relative
+}
+
+#nonprofit .nonprofit_orange .nonprofit_goals>div::before {
+    content: '';
+    position: absolute;
+    top: -7px;
+    left: 0;
+    width: 13px;
+    height: 13px;
+    border-radius: 50%;
+    background-color: #f4cdba
+}
+
+#nonprofit .nonprofit_orange .nonprofit_goals>div:last-child {
+    padding-right: 0
+}
+
+#nonprofit .nonprofit_orange .nonprofit_goals>div h5 {
+    margin-bottom: 0
+}
+
+#nonprofit .nonprofit_orange .nonprofit_goals>div p {
+    margin-top: 0;
+    margin-bottom: 30px
+}
+
+#nonprofit .nonprofit_orange .nonprofit_cta_2 {
+    margin-top: 30px;
+    margin-bottom: 100px
+}
+
+#nonprofit .nonprofit_orange .nonprofit_cta button {
+    padding: 25px;
+    width: 610px;
+    border-radius: 21px;
+    color: #4c4a6d!important;
+    background-color: #f8bc65!important;
+    font-size: 23px;
+    font-weight: 700;
+    line-height: 1.2
+}
+
+#nonprofit .nonprofit_orange .nonprofit_cta button:active {
+    opacity: .85
+}
+
+#nonprofit .nonprofit_orange .nonprofit_kieg {
+    padding: 10px 20px
+}
+
+#nonprofit .nonprofit_orange a {
+    color: #f8bc65;
+    text-decoration: underline
+}
+
+#nonprofit .nonprofit_footer h1 {
+    font-size: 33px;
+    line-height: 63px;
+    font-weight: 900;
+    color: #4c4a6d
+}
+
+#nonprofit .nonprofit_footer p {
+    font-size: 18px;
+    line-height: 1.78;
+    color: #4c4a6d
+}
+
+#nonprofit .nonprofit_footer_logo {
+    margin-top: 160px;
+    margin-bottom: 80px
+}

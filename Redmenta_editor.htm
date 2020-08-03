@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <meta name="google" content="notranslate">
+
+    <script type="text/javascript" async="" src="Redmenta_editor/conversion_async.js"></script>
+    <script type="text/javascript" async="" src="Redmenta_editor/analytics.js"></script>
+    <script async="" src="Redmenta_editor/gtm.js"></script>
+    <script>
+        (function(w, d, s, l, i) {
+            w[l] = w[l] || [];
+            w[l].push({
+                'gtm.start': new Date().getTime(),
+                event: 'gtm.js'
+            });
+            var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s),
+                dl = l != 'dataLayer' ? '&l=' + l : '';
+            j.async = true;
+            j.src =
+                'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+            f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-PK65VR8');
+    </script>
+
+
+    <link href="Redmenta_editor/metro-bootstrap.css" rel="stylesheet">
+    <link href="Redmenta_editor/metro-bootstrap-responsive.css" rel="stylesheet">
+    <link href="Redmenta_editor/jquery.css" rel="stylesheet">
+
+    <script src="Redmenta_editor/jquery_002.js"></script>
+    <script src="Redmenta_editor/jquery_004.js"></script>
+    <script src="Redmenta_editor/jquery_005.js"></script>
+    <script src="Redmenta_editor/jquery.js"></script>
+    <script src="Redmenta_editor/metro.js"></script>
+    <script src="Redmenta_editor/jquery-ui.js"></script>
+    <script src="Redmenta_editor/touch_punch.js"></script>
+    <script src="Redmenta_editor/jquery_003.js"></script>
+
+    <meta name="msapplication-TileColor" content="#FFFFFF">
+    <meta name="msapplication-TileImage" content="design/favicon/favicon-144.png">
+    <meta name="msapplication-config" content="browserconfig.xml">
+    <script src="Redmenta_editor/js_lang.php"></script>
+    <script src="Redmenta_editor/commonlibs.js"></script>
+    <script src="Redmenta_editor/ks_kitoltes.js"></script>
+    <script src="Redmenta_editor/js.js"></script>
+    <link href="Redmenta_editor/css_base.css" rel="stylesheet">
+    <link href="Redmenta_editor/css_popup.css" rel="stylesheet">
+
+    <link rel="stylesheet" media="screen and (max-width: 800px)" href="Redmenta_editor/res_mobile.css">
+    <link rel="stylesheet" media="screen and (max-width: 1365px) and (min-width: 801px)" href="Redmenta_editor/res_tablet.css">
+    <link rel="stylesheet" media="screen and (min-width: 1366px)" href="Redmenta_editor/res_laptop.css">
+
+    <link href="Redmenta_editor/mathquill.css" rel="stylesheet">
+    <link href="Redmenta_editor/toolbar.css" rel="stylesheet" id="calculatorstyle">
+    <script src="Redmenta_editor/mathquill.js"></script>
+    <script src="Redmenta_editor/toolbar.js"></script>
+
+    <link href="Redmenta_editor/select2.css" rel="stylesheet">
+    <script src="Redmenta_editor/select2.js"></script>
+
+    <script src="Redmenta_editor/platform.js" async="" defer="defer" gapi_processed="true"></script>
+    <link href="Redmenta_editor/css.css" rel="stylesheet">
+
+    <script async="" defer="defer" src="Redmenta_editor/launcher.js"></script>
+
+    <title>Redmenta</title>
+    <script src="Redmenta_editor/a"></script>
+</head>
+
+
+<body translate="no" class="notranslate metro">
+
+    <div id="content">
+        <div id="ks" class="kssajat">
+
+
+            <div class="panel">
+                <div class="panel" id="editKerdes" style="display: block;">
+                    <div class="panel-header bg-darkRed fg-white" id="editKerdesFelirat">Feladat szerkesztése</div>
+                    <div class="panel-content" id="editKerdesInner">
+                        <div id="ujKerdesAFelhobe">
+                            <form action="" method="post" enctype="multipart/form-data">
+                                <label>
+			<h2 style="margin-top: 6px">Feladat szövege 
+			<button type="button" onclick="meditor_toggle();" id="toggleeditor">Képletszerkesztő</button>
+			</h2>
+		</label>
+
+                                <div class="input-control textarea" id="szoveg2" style="display: block;">
+                                    <textarea name="szoveg" id="szoveg">Oldjuk meg a következő egyenletrendszert:\enter\enter|x^2-5x+7|^{^{\left|y\right|}}=\left|y\right|^{^{|x^2-5x+7|}}\enter\enter|x^2-5x+7|^{^{\frac{2}{|x^2-5x+7|}}}+\left|y\right|^{^{\frac{1}{\left|y\right|}}}=2
+		</textarea>
+                                </div>
+
+                                <div id="medit" style="display: none;" class="calculator">
+                                    <div class="mathquill-toolbar">
+                                        <ul class="mathquill-tab-bar">
+                                            <li class="mathquill-tab-selected">
+                                                <a href="#basics_tab" onclick="return false">Alapok</a>
+                                            </li>
+                                            <li>
+                                                <a href="#greek_tab" onclick="return false">Görög</a>
+                                            </li>
+                                            <li>
+                                                <a href="#operators_tab" onclick="return false">Operátorok</a>
+                                            </li>
+                                            <li>
+                                                <a href="#relationships_tab" onclick="return false">Kapcsolatok</a>
+                                            </li>
+                                            <li>
+                                                <a href="#arrows_tab" onclick="return false">Nyilak</a>
+                                            </li>
+                                            <li>
+                                                <a href="#delimiters_tab" onclick="return false">Határolók</a>
+                                            </li>
+                                            <li>
+                                                <a href="#misc_tab" onclick="return false">Vegyes</a>
+                                            </li>
+                                            <li>
+                                                <a href="#mathformat_tab" onclick="return false">Matek szöveg</a>
+                                            </li>
+                                        </ul>
+                                        <div class="mathquill-toolbar-panes">
+                                            <div class="mathquill-tab-pane mathquill-tab-pane-selected" id="basics_tab">
+                                                <ul>
+                                                    <li>
+                                                        <a title="\subscript" class="btn mathquill-rendered-math">
+                                                            <sub style="font-size: 0.6em; line-height: 3.5;">sub</sub>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a title="\supscript" class="btn mathquill-rendered-math">
+                                                            <sup style="font-size: 0.6em">sup</sup>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a title="\frac" class="btn mathquill-rendered-math"><span style="font-size: 0.55em;position:relative;top:-11px;margin-top: 10px;" class="fraction"><span class="numerator"><var>n</var></span><span class="denominator"><var>m</var></span><span style="width:0"></span></span></a></li>
+                                                    <li><a title="\sqrt" class="btn mathquill-rendered-math"><span style="font-size: 0.8em; padding-top: 3px"><span class="sqrt-prefix">√</span><span class="sqrt-stem" style="border-top-width: 1.7142857142857144px;">&nbsp;</span></span></a></li>
+                                                    <li><a title="\nthroot" class="btn mathquill-rendered-math"><span style="font-size: 0.7em"><sup class="nthroot" style="position:relative;top:-2px"><var>n</var></sup><span><span class="sqrt-prefix" style="top:3px">√</span><span class="sqrt-stem" style="border-top-width: 1.7142857142857144px;position:relative;top:-1px">&nbsp;</span></span></span></a></li>
+                                                    <li><a title="\binomial" class="btn mathquill-rendered-math"><span style="font-size: 0.5em;position:relative;top:-2px"><span class="paren" style="font-size: 2.087912087912088em; ">(</span><span class="array"><span><var>n</var></span><span><var>m</var></span></span><span class="paren" style="font-size: 2.087912087912088em; ">)</span></span></a></li>
+                                                    <li><a title="\vector" class="btn mathquill-rendered-math"><span class="array vector"><span class="vectorborder">&nbsp;</span><span class="vectortop">&nbsp;</span><span class="" style="font-size: 0.7em;padding-top: 2px">AB</span></span></a></li>
+                                                    <li><a title="\prime" class="btn mathquill-rendered-math"><span>′</span></a></li>
+                                                    <li><a title="\langle" class="btn mathquill-rendered-math"><span class="block"><span class="paren">⟨</span><span class="block"></span><span class="paren">⟩</span></span></a></li>
+                                                    <li><a title="+" class="btn mathquill-rendered-math"><span>+</span></a></li>
+                                                    <li><a title="-" class="btn mathquill-rendered-math"><span>−</span></a></li>
+                                                    <li><a title="\pm" class="btn mathquill-rendered-math"><span>±</span></a></li>
+                                                    <li><a title="\mp" class="btn mathquill-rendered-math"><span>∓</span></a></li>
+                                                    <li><a title="\cdot" class="btn mathquill-rendered-math"><span class="binary-operator">·</span></a></li>
+                                                    <li><a title="=" class="btn mathquill-rendered-math"><span class="binary-operator">=</span></a></li>
+                                                    <li><a title="\times" class="btn mathquill-rendered-math"><span class="binary-operator">×</span></a></li>
+                                                    <li><a title="\div" class="btn mathquill-rendered-math"><span class="binary-operator">÷</span></a></li>
+                                                    <li><a title="\ast" class="btn mathquill-rendered-math"><span class="binary-operator">∗</span></a></li>
+                                                    <li><a title="\therefore" class="btn mathquill-rendered-math"><span class="binary-operator">∴</span></a></li>
+                                                    <li><a title="\because" class="btn mathquill-rendered-math"><span class="binary-operator">∵</span></a></li>
+                                                    <li><a title="\sum" class="btn mathquill-rendered-math"><big style="position:relative;top:-2px">∑</big></a></li>
+                                                    <li><a title="\prod" class="btn mathquill-rendered-math"><big style="position:relative;top:-2px">∏</big></a></li>
+                                                    <li><a title="\coprod" class="btn mathquill-rendered-math"><big>∐</big></a></li>
+                                                    <li><a title="\int" class="btn mathquill-rendered-math"><big>∫</big></a></li>
+                                                    <li><a title="\forall" class="btn mathquill-rendered-math"><span>∀</span></a></li>
+                                                    <li><a title="\exists" class="btn mathquill-rendered-math"><span>∃</span></a></li>
+                                                    <li><a title="\le" class="btn mathquill-rendered-math"><span class="binary-operator">≤</span></a></li>
+                                                    <li><a title="\ge" class="btn mathquill-rendered-math"><span class="binary-operator">≥</span></a></li>
+                                                    <li><a title="\in" class="btn mathquill-rendered-math"><span class="binary-operator">∈</span></a></li>
+                                                    <li><a title="\notin" class="btn mathquill-rendered-math"><span class="binary-operator">∉</span></a></li>
+                                                    <li><a title="\N" class="btn mathquill-rendered-math"><span>ℕ</span></a></li>
+                                                    <li><a title="\P" class="btn mathquill-rendered-math"><span>ℙ</span></a></li>
+                                                    <li><a title="\Z" class="btn mathquill-rendered-math"><span>ℤ</span></a></li>
+                                                    <li><a title="\Q" class="btn mathquill-rendered-math"><span>ℚ</span></a></li>
+                                                    <li><a title="\R" class="btn mathquill-rendered-math"><span>ℝ</span></a></li>
+                                                    <li><a title="\C" class="btn mathquill-rendered-math"><span>ℂ</span></a></li>
+                                                    <li><a title="\H" class="btn mathquill-rendered-math"><span>ℍ</span></a></li>
+                                                </ul>
+                                            </div>
+                                            <div class="mathquill-tab-pane" id="greek_tab">
+                                                <ul>
+                                                    <li><a title="\alpha" class="btn mathquill-rendered-math"><var>α</var></a></li>
+                                                    <li><a title="\beta" class="btn mathquill-rendered-math"><var>β</var></a></li>
+                                                    <li><a title="\gamma" class="btn mathquill-rendered-math"><var>γ</var></a></li>
+                                                    <li><a title="\delta" class="btn mathquill-rendered-math"><var>δ</var></a></li>
+                                                    <li><a title="\zeta" class="btn mathquill-rendered-math"><var>ζ</var></a></li>
+                                                    <li><a title="\eta" class="btn mathquill-rendered-math"><var>η</var></a></li>
+                                                    <li><a title="\theta" class="btn mathquill-rendered-math"><var>θ</var></a></li>
+                                                    <li><a title="\iota" class="btn mathquill-rendered-math"><var>ι</var></a></li>
+                                                    <li><a title="\kappa" class="btn mathquill-rendered-math"><var>κ</var></a></li>
+                                                    <li><a title="\lambda" class="btn mathquill-rendered-math"><span class="nonSymbola">λ</span></a></li>
+                                                    <li><a title="\mu" class="btn mathquill-rendered-math"><var>μ</var></a></li>
+                                                    <li><a title="\nu" class="btn mathquill-rendered-math"><var>ν</var></a></li>
+                                                    <li><a title="\xi" class="btn mathquill-rendered-math"><var>ξ</var></a></li>
+                                                    <li><a title="\pi" class="btn mathquill-rendered-math"><span class="nonSymbola">π</span></a></li>
+                                                    <li><a title="\rho" class="btn mathquill-rendered-math"><var>ρ</var></a></li>
+                                                    <li><a title="\sigma" class="btn mathquill-rendered-math"><var>σ</var></a></li>
+                                                    <li><a title="\tau" class="btn mathquill-rendered-math"><var>τ</var></a></li>
+                                                    <li><a title="\upsilon" class="btn mathquill-rendered-math"><var>υ</var></a></li>
+                                                    <li><a title="\chi" class="btn mathquill-rendered-math"><var>χ</var></a></li>
+                                                    <li><a title="\psi" class="btn mathquill-rendered-math"><var>ψ</var></a></li>
+                                                    <li><a title="\omega" class="btn mathquill-rendered-math"><var>ω</var></a></li>
+                                                    <li><a title="\varepsilon" class="btn mathquill-rendered-math"><var>ε</var></a></li>
+                                                    <li><a title="\vartheta" class="btn mathquill-rendered-math"><var>ϑ</var></a></li>
+                                                    <li><a title="\varpi" class="btn mathquill-rendered-math"><var>ϖ</var></a></li>
+                                                    <li><a title="\varsigma" class="btn mathquill-rendered-math"><var>ς</var></a></li>
+                                                    <li><a title="\varphi" class="btn mathquill-rendered-math"><var>φ</var></a></li>
+                                                    <li><a title="\Gamma" class="btn mathquill-rendered-math"><span>Γ</span></a></li>
+                                                    <li><a title="\Delta" class="btn mathquill-rendered-math"><span>Δ</span></a></li>
+                                                    <li><a title="\Theta" class="btn mathquill-rendered-math"><span>Θ</span></a></li>
+                                                    <li><a title="\Lambda" class="btn mathquill-rendered-math"><span>Λ</span></a></li>
+                                                    <li><a title="\Xi" class="btn mathquill-rendered-math"><span>Ξ</span></a></li>
+                                                    <li><a title="\Pi" class="btn mathquill-rendered-math"><span>Π</span></a></li>
+                                                    <li><a title="\Sigma" class="btn mathquill-rendered-math"><span>Σ</span></a></li>
+                                                    <li><a title="\Upsilon" class="btn mathquill-rendered-math"><var style="font-family: serif">ϒ</var></a></li>
+                                                    <li><a title="\Phi" class="btn mathquill-rendered-math"><span>Φ</span></a></li>
+                                                    <li><a title="\Psi" class="btn mathquill-rendered-math"><span>Ψ</span></a></li>
+                                                    <li><a title="\Omega" class="btn mathquill-rendered-math"><span>Ω</span></a></li>
+                                                    <li><a title="\digamma" class="btn mathquill-rendered-math"><var>ϝ</var></a></li>
+                                                    <li><a title="\epsilon" class="btn mathquill-rendered-math"><var>ϵ</var></a></li>
+                                                    <li><a title="\phi" class="btn mathquill-rendered-math"><var>ϕ</var></a></li>
+                                                    <li><a title="\varkappa" class="btn mathquill-rendered-math"><var>ϰ</var></a></li>
+                                                    <li><a title="\varrho" class="btn mathquill-rendered-math"><var>ϱ</var></a></li>
+                                                </ul>
+                                            </div>
+                                            <div class="mathquill-tab-pane" id="operators_tab">
+                                                <ul>
+                                                    <li><a title="\wedge" class="btn mathquill-rendered-math"><span class="binary-operator">∧</span></a></li>
+                                                    <li><a title="\vee" class="btn mathquill-rendered-math"><span class="binary-operator">∨</span></a></li>
+                                                    <li><a title="\cup" class="btn mathquill-rendered-math"><span class="binary-operator">∪</span></a></li>
+                                                    <li><a title="\cap" class="btn mathquill-rendered-math"><span class="binary-operator">∩</span></a></li>
+                                                    <li><a title="\diamond" class="btn mathquill-rendered-math"><span>◇</span></a></li>
+                                                    <li><a title="\bigtriangleup" class="btn mathquill-rendered-math"><span>△</span></a></li>
+                                                    <li><a title="\otimes" class="btn mathquill-rendered-math"><span class="binary-operator">⊗</span></a></li>
+                                                    <li><a title="\oplus" class="btn mathquill-rendered-math"><span class="binary-operator">⊕</span></a></li>
+                                                    <li><a title="\bigtriangledown" class="btn mathquill-rendered-math"><span>▽</span></a></li>
+                                                    <li><a title="\odot" class="btn mathquill-rendered-math"><span>⊙</span></a></li>
+                                                    <li><a title="\bigcirc" class="btn mathquill-rendered-math"><span>◯</span></a></li>
+                                                    <li><a title="\dagger" class="btn mathquill-rendered-math"><span>†</span></a></li>
+                                                    <li><a title="\ddagger" class="btn mathquill-rendered-math"><span>‡</span></a></li>
+                                                    <li><a title="\ominus" class="btn mathquill-rendered-math"><span>⊖</span></a></li>
+                                                    <li><a title="\uplus" class="btn mathquill-rendered-math"><span>⊎</span></a></li>
+                                                    <li><a title="\sqcap" class="btn mathquill-rendered-math"><span>⊓</span></a></li>
+                                                    <li><a title="\triangleleft" class="btn mathquill-rendered-math"><span>⊲</span></a></li>
+                                                    <li><a title="\sqcup" class="btn mathquill-rendered-math"><span>⊔</span></a></li>
+                                                    <li><a title="\triangleright" class="btn mathquill-rendered-math"><span>⊳</span></a></li>
+                                                    <li><a title="\wr" class="btn mathquill-rendered-math"><span>≀</span></a></li>
+                                                    <li><a title="\amalg" class="btn mathquill-rendered-math"><span>∐</span></a></li>
+                                                </ul>
+                                            </div>
+                                            <div class="mathquill-tab-pane" id="relationships_tab">
+                                                <ul>
+                                                    <li><a title="&lt;" class="btn mathquill-rendered-math"><span class="binary-operator">&lt;</span></a></li>
+                                                    <li><a title="&gt;" class="btn mathquill-rendered-math"><span class="binary-operator">&gt;</span></a></li>
+                                                    <li><a title="\equiv" class="btn mathquill-rendered-math"><span class="binary-operator">≡</span></a></li>
+                                                    <li><a title="\cong" class="btn mathquill-rendered-math"><span class="binary-operator">≅</span></a></li>
+                                                    <li><a title="\sim" class="btn mathquill-rendered-math"><span class="binary-operator">∼</span></a></li>
+                                                    <li><a title="\ne" class="btn mathquill-rendered-math"><span class="binary-operator">≠</span></a></li>
+                                                    <li><a title="\propto" class="btn mathquill-rendered-math"><span class="binary-operator">∝</span></a></li>
+                                                    <li><a title="\approx" class="btn mathquill-rendered-math"><span class="binary-operator">≈</span></a></li>
+                                                    <li><a title="\ni" class="btn mathquill-rendered-math"><span class="binary-operator">∋</span></a></li>
+                                                    <li><a title="\notni" class="btn mathquill-rendered-math"><span class="binary-operator">∌</span></a></li>
+                                                    <li><a title="\subset" class="btn mathquill-rendered-math"><span class="binary-operator">⊂</span></a></li>
+                                                    <li><a title="\supset" class="btn mathquill-rendered-math"><span class="binary-operator">⊃</span></a></li>
+                                                    <li><a title="\notsubset" class="btn mathquill-rendered-math"><span class="binary-operator">⊄</span></a></li>
+                                                    <li><a title="\notsupset" class="btn mathquill-rendered-math"><span class="binary-operator">⊅</span></a></li>
+                                                    <li><a title="\subseteq" class="btn mathquill-rendered-math"><span class="binary-operator">⊆</span></a></li>
+                                                    <li><a title="\supseteq" class="btn mathquill-rendered-math"><span class="binary-operator">⊇</span></a></li>
+                                                    <li><a title="\mid" class="btn mathquill-rendered-math"><span>∣</span></a></li>
+                                                    <li><a title="\ll" class="btn mathquill-rendered-math"><span>≪</span></a></li>
+                                                    <li><a title="\gg" class="btn mathquill-rendered-math"><span>≫</span></a></li>
+                                                    <li><a title="\parallel" class="btn mathquill-rendered-math"><span>∥</span></a></li>
+                                                    <li><a title="\varnothing" class="btn mathquill-rendered-math"><span class="binary-operator">∅</span></a></li>
+                                                    <li><a title="\notsubseteq" class="btn mathquill-rendered-math"><span class="binary-operator">⊈</span></a></li>
+                                                    <li><a title="\notsupseteq" class="btn mathquill-rendered-math"><span class="binary-operator">⊉</span></a></li>
+                                                    <li><a title="\models" class="btn mathquill-rendered-math"><span>⊨</span></a></li>
+                                                    <li><a title="\prec" class="btn mathquill-rendered-math"><span>≺</span></a></li>
+                                                    <li><a title="\succ" class="btn mathquill-rendered-math"><span>≻</span></a></li>
+                                                    <li><a title="\preceq" class="btn mathquill-rendered-math"><span>≼</span></a></li>
+                                                    <li><a title="\succeq" class="btn mathquill-rendered-math"><span>≽</span></a></li>
+                                                    <li><a title="\simeq" class="btn mathquill-rendered-math"><span>≃</span></a></li>
+                                                    <li><a title="\bowtie" class="btn mathquill-rendered-math"><span>⋈</span></a></li>
+                                                    <li><a title="\sqsubset" class="btn mathquill-rendered-math"><span>⊏</span></a></li>
+                                                    <li><a title="\sqsupset" class="btn mathquill-rendered-math"><span>⊐</span></a></li>
+                                                    <li><a title="\smile" class="btn mathquill-rendered-math"><span>⌣</span></a></li>
+                                                    <li><a title="\sqsubseteq" class="btn mathquill-rendered-math"><span>⊑</span></a></li>
+                                                    <li><a title="\sqsupseteq" class="btn mathquill-rendered-math"><span>⊒</span></a></li>
+                                                    <li><a title="\doteq" class="btn mathquill-rendered-math"><span>≐</span></a></li>
+                                                    <li><a title="\frown" class="btn mathquill-rendered-math"><span>⌢</span></a></li>
+                                                    <li><a title="\vdash" class="btn mathquill-rendered-math"><span>⊦</span></a></li>
+                                                    <li><a title="\dashv" class="btn mathquill-rendered-math"><span>⊣</span></a></li>
+                                                </ul>
+                                            </div>
+                                            <div class="mathquill-tab-pane" id="arrows_tab">
+                                                <ul>
+                                                    <li><a title="\leftarrow" class="btn mathquill-rendered-math"><span class="binary-operator">←</span></a></li>
+                                                    <li><a title="\rightarrow" class="btn mathquill-rendered-math"><span class="binary-operator">→</span></a></li>
+                                                    <li><a title="\leftrightarrow" class="btn mathquill-rendered-math"><span class="binary-operator">↔</span></a></li>
+                                                    <li><a title="\uparrow" class="btn mathquill-rendered-math"><span>↑</span></a></li>
+                                                    <li><a title="\downarrow" class="btn mathquill-rendered-math"><span>↓</span></a></li>
+                                                    <li><a title="\updownarrow" class="btn mathquill-rendered-math"><span>↕</span></a></li>
+                                                    <li><a title="\mapsto" class="btn mathquill-rendered-math"><span>↦</span></a></li>
+                                                    <li><a title="\nearrow" class="btn mathquill-rendered-math"><span>↗</span></a></li>
+                                                    <li><a title="\hookleftarrow" class="btn mathquill-rendered-math"><span>↩</span></a></li>
+                                                    <li><a title="\hookrightarrow" class="btn mathquill-rendered-math"><span>↪</span></a></li>
+                                                    <li><a title="\searrow" class="btn mathquill-rendered-math"><span>↘</span></a></li>
+                                                    <li><a title="\leftharpoonup" class="btn mathquill-rendered-math"><span>↼</span></a></li>
+                                                    <li><a title="\rightharpoonup" class="btn mathquill-rendered-math"><span>⇀</span></a></li>
+                                                    <li><a title="\swarrow" class="btn mathquill-rendered-math"><span>↙</span></a></li>
+                                                    <li><a title="\leftharpoondown" class="btn mathquill-rendered-math"><span>↽</span></a></li>
+                                                    <li><a title="\rightharpoondown" class="btn mathquill-rendered-math"><span>⇁</span></a></li>
+                                                    <li><a title="\nwarrow" class="btn mathquill-rendered-math"><span>↖</span></a></li>
+                                                    <li><a title="\leftrightarrow" class="btn mathquill-rendered-math"><span class="binary-operator">↔</span></a></li>
+                                                    <li><a title="\Leftarrow" class="btn mathquill-rendered-math"><span class="binary-operator">⇐</span></a></li>
+                                                    <li><a title="\Rightarrow" class="btn mathquill-rendered-math"><span class="binary-operator">⇒</span></a></li>
+                                                    <li><a title="\Leftrightarrow" class="btn mathquill-rendered-math"><span class="binary-operator">⇔</span></a></li>
+                                                    <li><a title="\Uparrow" class="btn mathquill-rendered-math"><span>⇑</span></a></li>
+                                                    <li><a title="\Downarrow" class="btn mathquill-rendered-math"><span>⇓</span></a></li>
+                                                    <li><a title="\Updownarrow" class="btn mathquill-rendered-math"><span>⇕</span></a></li>
+                                                    <li><a title="\leftrightharpoons" class="btn mathquill-rendered-math"><span>⇋</span></a></li>
+                                                    <li><a title="\rightleftharpoons" class="btn mathquill-rendered-math"><span>⇌</span></a></li>
+                                                </ul>
+                                            </div>
+                                            <div class="mathquill-tab-pane" id="delimiters_tab">
+                                                <ul>
+                                                    <li><a title="\lfloor" class="btn mathquill-rendered-math"><span>⌊</span></a></li>
+                                                    <li><a title="\rfloor" class="btn mathquill-rendered-math"><span>⌋</span></a></li>
+                                                    <li><a title="\lceil" class="btn mathquill-rendered-math"><span>⌈</span></a></li>
+                                                    <li><a title="\rceil" class="btn mathquill-rendered-math"><span>⌉</span></a></li>
+                                                    <li><a title="\slash" class="btn mathquill-rendered-math"><span>/</span></a></li>
+                                                    <li><a title="\opencurlybrace" class="btn mathquill-rendered-math"><span>{</span></a></li>
+                                                    <li><a title="\closecurlybrace" class="btn mathquill-rendered-math"><span>}</span></a></li>
+                                                </ul>
+                                            </div>
+                                            <div class="mathquill-tab-pane" id="misc_tab">
+                                                <ul>
+                                                    <li><a title="\dots" class="btn mathquill-rendered-math"><span>…</span></a></li>
+                                                    <li><a title="\cdots" class="btn mathquill-rendered-math"><span>⋯</span></a></li>
+                                                    <li><a title="\vdots" class="btn mathquill-rendered-math"><span>⋮</span></a></li>
+                                                    <li><a title="\ddots" class="btn mathquill-rendered-math"><span>⋰</span></a></li>
+                                                    <li><a title="\surd" class="btn mathquill-rendered-math"><span>√</span></a></li>
+                                                    <li><a title="\ell" class="btn mathquill-rendered-math"><span>ℓ</span></a></li>
+                                                    <li><a title="\flat" class="btn mathquill-rendered-math"><span>♭</span></a></li>
+                                                    <li><a title="\natural" class="btn mathquill-rendered-math"><span>♮</span></a></li>
+                                                    <li><a title="\sharp" class="btn mathquill-rendered-math"><span>♯</span></a></li>
+                                                    <li><a title="\wp" class="btn mathquill-rendered-math"><span>℘</span></a></li>
+                                                    <li><a title="\bot" class="btn mathquill-rendered-math"><span>⊥</span></a></li>
+                                                    <li><a title="\clubsuit" class="btn mathquill-rendered-math"><span>♣</span></a></li>
+                                                    <li><a title="\diamondsuit" class="btn mathquill-rendered-math"><span>♢</span></a></li>
+                                                    <li><a title="\heartsuit" class="btn mathquill-rendered-math"><span>♡</span></a></li>
+                                                    <li><a title="\spadesuit" class="btn mathquill-rendered-math"><span>♠</span></a></li>
+                                                    <li><a title="\caret" class="btn mathquill-rendered-math"><span>^</span></a></li>
+                                                    <li><a title="\underscore" class="btn mathquill-rendered-math"><span>_</span></a></li>
+                                                    <li><a title="\backslash" class="btn mathquill-rendered-math"><span>\</span></a></li>
+                                                    <li><a title="\vert" class="btn mathquill-rendered-math"><span>|</span></a></li>
+                                                    <li><a title="\perp" class="btn mathquill-rendered-math"><span>⊥</span></a></li>
+                                                    <li><a title="\nabla" class="btn mathquill-rendered-math"><span>∇</span></a></li>
+                                                    <li><a title="\AA" class="btn mathquill-rendered-math"><span>Å</span></a></li>
+                                                    <li><a title="\bullet" class="btn mathquill-rendered-math"><span>•</span></a></li>
+                                                    <li><a title="\neg" class="btn mathquill-rendered-math"><span>¬</span></a></li>
+                                                    <li><a title="\Re" class="btn mathquill-rendered-math"><span>ℜ</span></a></li>
+                                                    <li><a title="\Im" class="btn mathquill-rendered-math"><span>ℑ</span></a></li>
+                                                    <li><a title="\partial" class="btn mathquill-rendered-math"><span>∂</span></a></li>
+                                                    <li><a title="\infty" class="btn mathquill-rendered-math"><span>∞</span></a></li>
+                                                    <li><a title="\aleph" class="btn mathquill-rendered-math"><span>ℵ</span></a></li>
+                                                    <li><a title="\deg" class="btn mathquill-rendered-math"><span>°</span></a></li>
+                                                    <li><a title="\angle" class="btn mathquill-rendered-math"><span>∠</span></a></li>
+                                                    <li><a title="\triangle" class="btn mathquill-rendered-math"><span>▵</span></a></li>
+                                                    <li><a title="\top" class="btn mathquill-rendered-math"><span>⊤</span></a></li>
+                                                    <li><a title="\hbar" class="btn mathquill-rendered-math"><span>ℏ</span></a></li>
+                                                    <li><a title="\circ" class="btn mathquill-rendered-math"><span>∘</span></a></li>
+                                                    <li><a title="\setminus" class="btn mathquill-rendered-math"><span>∖</span></a></li>
+                                                </ul>
+                                            </div>
+                                            <div class="mathquill-tab-pane" id="mathformat_tab">
+                                                <ul>
+                                                    <li>
+                                                        <a title="\mathrm" class="btn mathquill-rendered-math">'<span class="roman font"></span>'</a>
+                                                    </li>
+                                                    <li>
+                                                        <a title="\mathit" class="btn mathquill-rendered-math"><i class="font"></i></a>
+                                                    </li>
+                                                    <li>
+                                                        <a title="\mathsf" class="btn mathquill-rendered-math"><span></span></a>
+                                                    </li>
+                                                    <li>
+                                                        <a title="\mathbf" class="btn mathquill-rendered-math"><span></span></a>
+                                                    </li>
+                                                    <li>
+                                                        <a title="\mathtt" class="btn mathquill-rendered-math"><span></span></a>
+                                                    </li>
+                                                    <li>
+                                                        <a title="\underline" class="btn mathquill-rendered-math"><span></span></a>
+                                                    </li>
+                                                    <li>
+                                                        <a title="\overline" class="btn mathquill-rendered-math"><span></span></a>
+                                                    </li>
+                                                    <li>
+                                                        <a title="\orange" class="btn mathquill-rendered-math"><span></span></a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="inputDisplay">
+                                        <div class="calcInput" id="inCurrent"><span id="in" class="mathquill-rendered-math mathquill-editable"><span class="textarea"><textarea autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"></textarea></span>
+                                            <div class="calcResult" id="outCurrent"><span id="out"></span></div>
+                                        </div>
+                                    </div>
+
+                                    <input id="medit_load" value="1" type="hidden">
+
+                                    <div id="under_szoveg" style="display: block;">
+                                    </div>
+                                </div>
+
+</body>
+
+</html>
